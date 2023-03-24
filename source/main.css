@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: rgb(48, 48, 48);
+    padding: 10px;
+}
+
+header #profile{
+    display: flex;
+    justify-content: center;
+}
+
+header #IdName{
+    display:flex;
+    justify-content: center;
+    color: white;
+    text-decoration:solid;
+    font-size: 20px;
+}
+
+header #profile-picture{
+    width: 15%;
+    height: 15%;
+    display: flex;
+    border-radius: 100%;
+    border-color: rgb(26, 26, 26);
+}
+
+header #social-dock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+header #social-dock img{
+    padding: 5px;
+}
+header #social-dock img:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+#content #Projects-section h1{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+@media (max-width: 600px) {
+    header #profile-picture {
+      width: 30%;
+      height: 30%;
+    }
+  }
