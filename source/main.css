@@ -45,7 +45,11 @@ header #social-dock img:hover{
 }
 
 
-
+#content #Projects-section #projects{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
 
 
 #content #Projects-section h1{
@@ -53,6 +57,25 @@ header #social-dock img:hover{
     justify-content: center;
 }
 
+#content #Projects-section .projectButton{
+    width: 125px;
+    height: 160px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: gainsboro;
+    margin: 15px;
+}
+
+#content #Projects-section .projectButton a{
+    text-decoration: none;
+    color: black;
+}
+#content #Projects-section .projectButton:hover{
+    border: solid;
+    border-color: blue;
+    
+}
 
 
 
