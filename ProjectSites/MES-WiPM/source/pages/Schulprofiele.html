@@ -28,11 +28,11 @@
                 <div id="popup-linklist-1" class="nav-popup-link">
                     <a href="../../index.html">Unsere Schule</a>
                     <a href="../pages/kontakt.html#Administrators_list_Container">Verwaltung</a>
-                    <a href="">Förderverein</a>
+                    <a href="../pages/Qualitaet.html">Mehr</a>
                 </div>
             </div>
             <div id="nav-link-2">
-                <a href="#">Schulprofile</a>
+                <a href="../pages/Schulprofiele.html">Schulprofile</a>
                 <div id="popup-linklist-2" class="nav-popup-link">
                     <a href="">Berufsschule</a>
                     <a href="">Berufsfachschule</a>
@@ -78,7 +78,9 @@
                 src="../images/icons/Arrow_right_2_Blue.png" alt=""></button>
         <div id="side-manue-links">
             <a href="../../index.html">Über uns <img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
-            <a href="">Schulprofile <img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
+            <a href="../pages/Schulprofiele.html">Schulprofile <img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
+            <a href="../pages/Qualitaet.html">Qualität <img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
+            <a href="../pages/MaxEythSchule.html">Max-Eyth-Schule <img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
             <a href="../pages/Aktuelles.html#Events_container">Aktuelles <img
                     src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
             <a href="../pages/kontakt.html">Kontakt <img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
@@ -89,7 +91,7 @@
         <div id="side-menue-footer">
             <div id="side-menue-footer-links">
                 <a href="../pages/impressum.html">Impressum</a>
-                <a href="#">Datenschutz</a>
+                <a href="../pages/impressum.html#data-protection-conteiner">Datenschutz</a>
                 <a href="#">Design</a>
             </div>
             <p>©2024 Max-Eyth-Schule Stuttgart</p>
@@ -292,7 +294,10 @@
                                 <div class="separation_1_1">
                                     <div class="schoolprofile-item-conteiner" id="professional-school">
                                         <h3>Berufsschule</h3>
-                                        <div id="schoolprofile-item-content">
+                                        <div id="schoolprofile-item-content" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/c/e/csm_pexels-photo-834949_d692489874.jpeg');
+                                        deaktivateAll();
+                                        aktivateItems(['header-img','header-Berufschule','schoolprofiles-content-Berufschule','schoolprofiles-content-Berufschule-Home']);
+                                        loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'Berufschule')">
                                             <ul class="custom-list">
                                                 <li>Feinmechaniker</li>
                                                 <li>Technisches produktionsdesign</li>
@@ -301,30 +306,36 @@
                                                 <li>Industriemechaniker</li>
                                                 <li>Machinen- und Anlagenfuhrer</li>
                                             </ul>
-                                            <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt="">
+                                            <a href="#"><img src="../images/icons/Arrow_right_1_White.png" alt="">
                                                 Weiter</a>
                                         </div>
                                     </div>
-                                    <div class="schoolprofile-item-conteiner" id="Berufsfachschule-item">
+                                    <div class="schoolprofile-item-conteiner" id="Berufsfachschule-item"  onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/9/c/csm_pexels-photo-212286_47d23782c5.jpeg');
+                                    deaktivateAll();
+                                      aktivateItems(['header-img','header-Berufsfachschule','schoolprofiles-content-Berufsfachschule','schoolprofiles-content-Berufsfachschule-Home']);
+                                      loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'BFS')">
                                         <h3>Berufsfachschule</h3>
                                         <div id="schoolprofile-item-content">
                                             <p>
                                                 Zwei jährige gewerblichtechinische Berufsfachschule für Metalltechnik
                                             </p>
-                                            <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt="">
+                                            <a href="#"><img src="../images/icons/Arrow_right_1_White.png" alt="">
                                                 Weiter</a>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="separation_1_2">
-                                    <div class="schoolprofile-item-conteiner" href="" id="Berufsskolleg-item">
+                                    <div class="schoolprofile-item-conteiner" href="" id="Berufsskolleg-item" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                                    deaktivateAll();
+                                   aktivateItems(['header-img', 'header-Berufskolleg','schoolprofiles-content-Berufskolleg', 'schoolprofiles-content-Berufskolleg-Home']);
+                                   loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'BK')">
                                         <h3>Berufsskolleg</h3>
                                         <div id="schoolprofile-item-content">
                                             <p>
                                                 Zweijähriges Berufskolleg für Produktdesign
                                             </p>
-                                            <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt="">
+                                            <a href="#"><img src="../images/icons/Arrow_right_1_White.png" alt="">
                                                 Weiter</a>
                                         </div>
                                     </div>
@@ -346,7 +357,10 @@
                             <div class="separation_1">
                                 <div class="separation_1_1">
                                     <div onclick="changePage('./source/pages/Intern.html')"
-                                        class="schoolprofile-item-conteiner" id="TG-item">
+                                        class="schoolprofile-item-conteiner" id="TG-item" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/7/1/csm_pexels-photo-3184407_296a791143.jpg');
+                                        deaktivateAll();
+                                        aktivateItems(['header-img','header-TG','schoolprofiles-content-TG','schoolprofiles-content-TG-Home']);
+                                        loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'TG')">
                                         <h3> Technisches Gymnasium</h3>
                                         <div id="schoolprofile-item-content">
                                             <ul class="custom-list">
@@ -354,23 +368,29 @@
                                                 <li>Mechatronik</li>
                                                 <li>Technik und Managment</li>
                                             </ul>
-                                            <a href="./source/pages/Intern.html"><img
+                                            <a href="#"><img
                                                     src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
                                         </div>
                                     </div>
-                                    <div class="schoolprofile-item-conteiner" id="MS-item">
+                                    <div class="schoolprofile-item-conteiner" id="MS-item" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/6/1/csm_CAD_Fachschule_a6d032c90f.jpg');
+                                    deaktivateAll();
+                                    aktivateItems(['header-img','header-Meisterschule','schoolprofiles-content-Meisterschule','schoolprofiles-content-Meisterschule-Home']);
+                                    loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'Meisterschule')">
                                         <h3>Meisterschule</h3>
                                         <div id="schoolprofile-item-content">
                                             <p>
                                                 Für das Feinwerkmechanikerhandwerk
                                             </p>
-                                            <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt="">
+                                            <a href="#"><img src="../images/icons/Arrow_right_1_White.png" alt="">
                                                 Weiter</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="separation_1_2">
-                                    <div class="schoolprofile-item-conteiner" id="Technikerschule-item">
+                                    <div class="schoolprofile-item-conteiner" id="Technikerschule-item" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/c/7/csm_CAD_Meister_53932f78a6.jpg');
+                                    deaktivateAll();
+                                    aktivateItems(['header-img','header-Technikerschule','schoolprofiles-content-Technikerschule','schoolprofiles-content-Technikerschule-Home']);
+                                    loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'Technikerschule')">
                                         <h3>Technikerschule</h3>
                                         <div id="schoolprofile-item-content">
                                             <p>
@@ -381,12 +401,15 @@
                                                 <li>Teilzeit (Abendschule)</li>
                                             </ul>
                                             </p>
-                                            <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt="">
+                                            <a href="#"><img src="../images/icons/Arrow_right_1_White.png" alt="">
                                                 Weiter</a>
                                         </div>
                                     </div>
 
-                                    <div class="schoolprofile-item-conteiner" id="VAB-item">
+                                    <div class="schoolprofile-item-conteiner" id="VAB-item"  onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/2/csm_people-woman-coffee-meeting_071281c60a.jpg');
+                                    deaktivateAll();
+                                    aktivateItems(['header-img','header-VAB','schoolprofiles-content-VAB','schoolprofiles-content-VAB-Home']);
+                                    loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'VAB')">
                                         <h3>Vorqualifizierungsjahr Arbeit/Beruf (VAB)</h3>
                                         <div id="schoolprofile-item-content">
                                             <p>
@@ -397,7 +420,7 @@
                                                 <li>Computertechnik</li>
                                             </ul>
                                             </p>
-                                            <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt="">
+                                            <a href="#"><img src="../images/icons/Arrow_right_1_White.png" alt="">
                                                 Weiter</a>
                                         </div>
                                     </div>
@@ -422,7 +445,10 @@
                                             <li>Industriemechaniker</li>
                                             <li>Machinen- und Anlagenfuhrer</li>
                                         </ul>
-                                        <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
+                                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/c/e/csm_pexels-photo-834949_d692489874.jpeg');
+                                        deaktivateAll();
+                                        aktivateItems(['header-img','header-Berufschule','schoolprofiles-content-Berufschule','schoolprofiles-content-Berufschule-Home']);
+                                        loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'Berufschule')"><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
                                     </div>
                                 </div>
 
@@ -434,11 +460,14 @@
                                             src="../images/icons/Arrow_right_3_White.png" alt=""></a>
                                     </div>
                                     <div class="dopdown-item-content" id="Berufsfachschule-item-content"
-                                        style="display: none;">
+                                        style="display: none;" >
                                         <p>
                                             Zwei jährige gewerblichtechinische Berufsfachschule für Metalltechnik
                                         </p>
-                                        <a href=""><img src="/source/images/icons/Arrow_right_1_White.png" alt="">
+                                        <a href="#"  onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/9/c/csm_pexels-photo-212286_47d23782c5.jpeg');
+                                        deaktivateAll();
+                                          aktivateItems(['header-img','header-Berufsfachschule','schoolprofiles-content-Berufsfachschule','schoolprofiles-content-Berufsfachschule-Home']);
+                                          loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'BFS')"><img src="/source/images/icons/Arrow_right_1_White.png" alt="">
                                             Weiter</a>
                                     </div>
                                 </div>
@@ -455,7 +484,10 @@
                                         <p>
                                             Zweijähriges Berufskolleg für Produktdesign
                                         </p>
-                                        <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
+                                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                                        deaktivateAll();
+                                       aktivateItems(['header-img', 'header-Berufskolleg','schoolprofiles-content-Berufskolleg', 'schoolprofiles-content-Berufskolleg-Home']);
+                                       loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'BK')"><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
                                     </div>
                                 </div>
 
@@ -470,7 +502,10 @@
                                         <p>
                                             Ab Klasse 8 mit dem Profiel "Technik und Gestalltung"
                                         </p>
-                                        <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
+                                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/7/1/csm_pexels-photo-3184407_296a791143.jpg');
+                                        deaktivateAll();
+                                        aktivateItems(['header-img','header-TG','schoolprofiles-content-TG','schoolprofiles-content-TG-Home']);
+                                        loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'TG')"><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
                                     </div>
                                 </div>
 
@@ -487,7 +522,10 @@
                                             <li>Mechatronik</li>
                                             <li>Technik und Managment</li>
                                         </ul>
-                                        <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
+                                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/7/1/csm_pexels-photo-3184407_296a791143.jpg');
+                                        deaktivateAll();
+                                        aktivateItems(['header-img','header-TG','schoolprofiles-content-TG','schoolprofiles-content-TG-Home']);
+                                        loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'TG')"><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
                                     </div>
                                 </div>
 
@@ -502,7 +540,10 @@
                                         <p>
                                             Für das Feinwerkmechanikerhandwerk
                                         </p>
-                                        <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
+                                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/6/1/csm_CAD_Fachschule_a6d032c90f.jpg');
+                                        deaktivateAll();
+                                        aktivateItems(['header-img','header-Meisterschule','schoolprofiles-content-Meisterschule','schoolprofiles-content-Meisterschule-Home']);
+                                        loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'Meisterschule')"><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
                                     </div>
                                 </div>
 
@@ -523,7 +564,10 @@
                                             <li>Teilzeit (Abendschule)</li>
                                         </ul>
                                         </p>
-                                        <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
+                                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/c/7/csm_CAD_Meister_53932f78a6.jpg');
+                                        deaktivateAll();
+                                        aktivateItems(['header-img','header-Technikerschule','schoolprofiles-content-Technikerschule','schoolprofiles-content-Technikerschule-Home']);
+                                        loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'Technikerschule')"><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
                                     </div>
                                 </div>
 
@@ -543,7 +587,10 @@
                                             <li>Computertechnik</li>
                                         </ul>
                                         </p>
-                                        <a href=""><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
+                                        <a href="#"  onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/2/csm_people-woman-coffee-meeting_071281c60a.jpg');
+                                        deaktivateAll();
+                                        aktivateItems(['header-img','header-VAB','schoolprofiles-content-VAB','schoolprofiles-content-VAB-Home']);
+                                        loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 3,'VAB')"><img src="../images/icons/Arrow_right_1_White.png" alt=""> Weiter</a>
                                     </div>
                                 </div>
 
