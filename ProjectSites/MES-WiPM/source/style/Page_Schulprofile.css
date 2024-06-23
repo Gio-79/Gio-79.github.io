@@ -1,0 +1,501 @@
+#content {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#side-panel {
+    min-width: 384px;
+    max-width: 384px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid var(--MES_Blue_Color);
+    border-width: 0 2px 0 0;
+}
+
+#schoolprofiles {
+    margin-top: 20px;
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+@keyframes folder-link-style-hover {
+    0%{}
+    100%{  margin-left: 100px; margin-right: 10px;}
+}
+
+#content #schoolprofiles #schoolprofiles-content{
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+#content #schoolprofiles #schoolprofiles-content .content-image{
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
+    max-width: 100%; /* Optional: ensure the image does not overflow */
+    height: auto; /* Optional: maintain aspect ratio */
+    border-radius: 15px;
+}
+
+
+
+
+#nav {
+   background-color: rgb(245, 245, 245);
+   border-radius: 15px;
+   padding: 15px;
+   border: 1px solid rgb(193, 193, 193);
+}
+
+#nav,#events h2,p,h4{
+    color:  rgb(88,88,88);
+}
+
+#nav a {
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--MES_Blue_Color);
+}
+
+#nav a:hover{
+    background-color: rgb(227, 227, 227);
+}
+
+#nav img {
+   width: 25px;
+   padding-left: 10px;
+}
+
+#events{
+    margin-top: 10px;
+    background-color: rgba(0, 162, 237, 0.08);
+   
+   padding: 15px;
+}
+
+#events h3{
+   color: var(--MES_Blue_Color);
+}
+
+.event-card{
+    border-color: rgb(169, 169, 169);
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    padding: 2px;
+}
+
+
+#content #schoolprofiles #schoolprofiles-content-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post_container{
+    background-color: white;
+    border: 1px solid rgb(193, 193, 193);
+    padding: 20px;
+    width: 75%;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-left: 50%;
+    margin-right: auto;
+    transform: translate(-50%);
+}
+
+.post_container .post_image{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    width: 50%;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.post_title{
+    color: var(--MES_Blue_Color);
+    text-align: center;
+    margin-left: 5%;
+}
+
+.post_description{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.post_date{
+    color: rgb(133, 133, 133);
+    margin-left: 5%;
+}
+
+.post_open_folder_link{
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--MES_Blue_Color);
+    font-size: 22px;
+}
+
+.post_open_folder_link img{
+    width: 25px;
+}
+
+.post_container_content{
+    display: none;
+}
+.post_container_content video{
+    margin-left: 50%;
+    margin-right: auto;
+    transform: translate(-50%);
+    width: 80%;
+    border-radius:15px;
+}
+.post_container_content p{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.post_container_content a{
+    text-decoration: none;
+    color: var(--MES_Blue_Color);
+    display: flex;
+    align-items: center;
+}
+
+.post_container_content a img{
+    width: 25px;
+    padding-right: 10px;
+}
+
+/*.post_container_content img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+*/
+
+.Pharagraph_img_right_p_left,.Pharagraph_img_left_p_right{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Pharagraph_img_right_p_left img{
+    margin-right: 5%;
+    width: auto;
+}
+
+.Pharagraph_img_left_p_right img{
+    margin-left: 5%;
+    width: auto;
+}
+
+.Pharagraph_img_only{
+    margin-left: 50%;
+    margin-right: auto;
+    transform: translate(-50%);
+    height: 450px;
+    width: 90%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+
+.download-folder-category{
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgb(193, 193, 193);
+    margin-top: 10px;
+}
+
+.download-folder-headline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--MES_Blue_Color);
+}
+
+.download-folder-headline img{
+   width: 35px;
+}
+
+
+@media (max-width:1900px) {
+    #content #schoolprofiles #schoolprofiles-content-header {
+        margin-top: 0px;
+        width: 97%;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--MES_Blue_Color);
+        border-radius: 15px;
+        padding: 5px;
+    }
+    #content #schoolprofiles #schoolprofiles-content-header #headers{
+        box-sizing: border-box;
+        height: 100%;
+        min-width: 300px;
+    }
+    #content #schoolprofiles #schoolprofiles-content-header #headers a{
+        width: 250px;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    #content #schoolprofiles #schoolprofiles-content-header #headers a:hover{
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    #content #schoolprofiles #schoolprofiles-content-header #header-img{
+        min-width: 60%;
+        max-width: 100%;
+        height: 450px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 15px;
+        border-color: white;
+        border-width: 3px;
+        border-style: solid;
+        background-color: white;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width:1200px) {
+    #content #schoolprofiles #schoolprofiles-content-header {
+        margin-top: 0px;
+        width: 97%;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: var(--MES_Blue_Color);
+        border-radius: 15px;
+        padding: 5px;
+    }
+    #content #schoolprofiles #schoolprofiles-content-header #headers{
+        box-sizing: border-box;
+        height: 100%;
+        min-width: 100%;
+    }
+    #content #schoolprofiles #schoolprofiles-content-header #headers a{
+        width: 90%;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    #content #schoolprofiles #schoolprofiles-content-header #headers a:hover{
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    #content #schoolprofiles #schoolprofiles-content-header #header-img{
+        min-width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 15px;
+        border-color: white;
+        border-width: 3px;
+        border-style: solid;
+        background-color: white;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (min-width:1900px) {
+    #content #schoolprofiles #schoolprofiles-content-header #header-img{
+        width: 97%;
+        height: 450px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 15px;
+        border-color: var(--MES_Blue_Color);
+        border-width: 3px;
+        border-style: solid;
+        background-color: white;
+    }
+    #content #schoolprofiles #schoolprofiles-content-header {
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #content #schoolprofiles #schoolprofiles-content-header a{
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        background-color: var(--MES_Blue_Color);
+        padding: 15px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: white;
+        border-radius: 10px 10px 0 0;
+        margin-right: -100px;
+    }
+    #content #schoolprofiles #schoolprofiles-content-header a:hover{
+        animation:folder-link-style-hover 0.35s forwards ;
+    }
+
+}
+
+@media (max-width:1000px) {
+    #content{
+        flex-direction: column;
+    }
+    #events{
+        display: none;
+    }
+
+    #header-img{
+        height: 300px;
+    }
+
+    #side-panel {
+       min-width: 100%;
+       border: none;
+    }
+
+    #nav {
+        background-color: rgb(245, 245, 245);
+        border-radius: 15px;
+        padding: 15px;
+        border: 1px solid rgb(88,88,88);
+     }
+     
+     
+     #nav a {
+         font-size: 14px;
+         margin: 5px;
+         padding: 5px 30px;
+         border-radius: 5px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         text-decoration: none;
+         color: var(--MES_Blue_Color);
+     }
+
+     #schoolprofiles {
+        width: 100%
+    }
+    #schoolprofiles h1{
+        font-size: 20px;
+    }
+     
+}
+
+@media (min-width:1000px) {
+    #Instruction-Conteiner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Other_Informations {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+    }
+
+}
+
+
+@media (max-width:1500px) {
+    #Schoolprofiles_content .separation_1_1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Schoolprofiles_content .separation_1_2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+}
+
+@media (max-width:1100px) {
+
+    #Schoolprofiles_content .separation_1 {
+        display: none;
+    }
+
+
+    #Schoolprofiles_content #dropdown-content {
+        display: block;
+    }
+}
+
+@media (max-width:1000px){
+    .post_container .post_image{
+        width: 80%;
+    }
+
+    .post_container{
+        width: 90%;
+    }
+
+    .post_title{
+        font-size: 18px;
+    }
+
+    .Pharagraph_img_right_p_left,.Pharagraph_img_left_p_right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Pharagraph_img_right_p_left img{
+        width: 80%;
+        max-height: 400px;
+        height: auto;
+        margin: 0;
+     }
+     
+     .Pharagraph_img_left_p_right img{
+        width: 80%;
+        height: auto;
+        max-height: 400px;
+        margin: 0;
+     }
+   
+}
