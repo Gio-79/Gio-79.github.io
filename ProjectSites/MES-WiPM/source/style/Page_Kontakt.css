@@ -1,0 +1,90 @@
+#Directions_Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    height: 500px;
+}
+
+#Directions_Container #Contact_details_Container{
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid rgb(211, 211, 211);
+    height: 100%;
+    min-width: 200px;
+    max-width: 600px;
+    padding: 1px 30px;
+}
+
+#Directions_Container #Contact_details_Container a{
+    text-decoration: none;
+    color: var(--MES_Blue_Color);
+}
+
+#Directions_Container #Google_Maps_Window{
+    margin-left: 15px;
+    width: 50%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid rgb(211, 211, 211);
+    height: 100%;
+}
+
+#School_administration_Container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+#School_administration_Container{
+    display: flex;
+    flex-direction: column;
+}
+
+#School_administration_Container #Administrators_list_Container .Administration_element{
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(193, 193, 193);
+}
+
+#School_administration_Container #Administrators_list_Container .Administration_element a{
+    text-decoration: none;
+    color: var(--MES_Blue_Color);
+}
+
+@media (max-width:1000px) {
+
+    #Directions_Container{
+        margin-top: 100px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #Directions_Container #Contact_details_Container{
+        width: 90%;
+        padding: 5px;
+        max-width: 1000px;
+    }
+
+    #Directions_Container #Google_Maps_Window{
+        width: 91%;
+        height: 450px;
+    }
+}
+
+@media (max-width:600px) {
+    #School_administration_Container #Administrators_list_Container .Administration_element a{
+        font-size: 14px;
+        text-decoration:solid;
+    }
+
+    #Directions_Container #Contact_details_Container a{
+        font-size: 14px;
+    }    
+
+}

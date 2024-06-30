@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Eyth Schule Stuttgart</title>
+    <link rel="shortcut con" href="source/images/logos/mes-logo_32x28.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/Page_Schulprofile.css">
+    <script src="../skript/main.js"></script>
+    <script src="../skript/cookieManagment.js"></script>
+    <script src="../skript/jsonManagment.js"></script>
+    <script src="../skript/clendarManagment.js"></script>
+    <script src="../skript/htmlContentManagment.js"></script>
+</head>
+
+<body>
+    <header>
+        <img id="header_main_logo" onclick="changePage('../../index.html')"
+            src="../images/logos/mes-logo-weiss_blau-gelb.png" alt="">
+        <button onclick="sideMenueVisibility()" id="menue_btn"><img id="menue_icon" src="../images/icons/menue.png"
+                alt=""></button>
+        <div id="nav-link-triggers">
+            <div id="nav-link-1">
+                <a href="../../index.html">Über uns</a>
+                <div id="popup-linklist-1" class="nav-popup-link">
+                    <a href="../../index.html">Unsere Schule</a>
+                    <a href="../pages/kontakt.html#Administrators_list_Container">Verwaltung</a>
+                    <a href="">Förderverein</a>
+                </div>
+            </div>
+            <div id="nav-link-2">
+                <a href="#">Schulprofile</a>
+                <div id="popup-linklist-2" class="nav-popup-link">
+                    <a href="">Berufsschule</a>
+                    <a href="">Beratungslehrkreafte</a>
+                    <a href="">Schulpartnerschaften</a>
+                    <a href="">Technisches gymnasium</a>
+                    <a href="">Meisterschule</a>
+                    <a href="">Technikerschule</a>
+                    <a href="">Meisterschule</a>
+                </div>
+            </div>
+            <div id="nav-link-3">
+                <a href="../pages/Aktuelles.html#Events_container">Aktuelles</a>
+                <div id="popup-linklist-3" class="nav-popup-link">
+                    <a href="../pages/Aktuelles.html#Current-Schoollife_Conatiner">Schulleben</a>
+                    <a href="../pages/Aktuelles.html#Events_container">Termine</a>
+                </div>
+            </div>
+            <div id="nav-link-4">
+                <a href="../pages/kontakt.html">Kontakt</a>
+                <!-- <div id="popup-linklist-4" class="nav-popup-link">
+                </div> -->
+            </div>
+            <div id="nav-link-5">
+                <a href="../pages/Intern.html">Intern</a>
+                <div id="popup-linklist-5" class="nav-popup-link">
+                    <a href="https://moodle.mes-stuttgart.de" target="_blank">Moodle</a>
+                    <a href="https://ajax.webuntis.com/WebUntis/?school=Max-Eyth#/basic/login" target="_blank">Untis</a>
+                    <a href="https://mail.maxeythschule.de/webapp/" target="_blank">Kopano</a>
+                    <a href="https://www.microsoft.com/de-de/education/products/office" target="_blank">Microsoft
+                        365</a>
+                </div>
+            </div>
+            <div id="nav-link-6">
+                <a href="../pages/FrequentlyAskedQuestions.html">FAQ</a>
+                <!-- <div id="popup-linklist-6" class="nav-popup-link">
+     
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <div id="side-menue">
+        <button id="side-menue-hide-btn" onclick="sideMenueVisibility()"><img
+                src="../images/icons/Arrow_right_2_Blue.png" alt=""></button>
+        <div id="side-manue-links">
+            <a href="../../index.html">Über uns <img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
+            <a href="">Schulprofile <img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
+            <a href="../pages/Qualitaet.html">Qualität<img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
+            <a href="../pages/Aktuelles.html#Events_container">Aktuelles <img
+                    src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
+            <a href="../pages/kontakt.html">Kontakt <img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
+            <a href="../pages/Intern.html">Intern <img src="../images/icons/Arrow_right_1_Black.png" alt=""></a>
+            <a href="../pages/FrequentlyAskedQuestions.html">FAQ <img src="../images/icons/Arrow_right_1_Black.png"
+                    alt=""></a>
+        </div>
+        <div id="side-menue-footer">
+            <div id="side-menue-footer-links">
+                <a href="../pages/impressum.html">Impressum</a>
+                <a href="#">Datenschutz</a>
+                <a href="#">Design</a>
+            </div>
+            <p>©2024 Max-Eyth-Schule Stuttgart</p>
+        </div>
+    </div>
+    <div id="content">
+        <script>
+            function deaktivateAll() {
+                deaktivateItems(['header-img'])
+                //ue
+                deaktivateItems(['schoolprofiles-content-ue']); //Main Content Window
+                deaktivateItems(['header-Schuelermitverantwortung']);    //nav
+                deaktivateItems(['schoolprofiles-content-Schuelermitverantwortung-Home']) // all sub windows
+
+                //Beratungslehrkräfte
+                deaktivateItems(['schoolprofiles-content-Beratungslehrkreafte']);
+                deaktivateItems(['header-Beratungslehrkreafte']);
+                deaktivateItems(['schoolprofiles-content-Beratungslehrkreafte-Home']);
+
+                //Schulpartnerschaften
+                deaktivateItems(['schoolprofiles-content-Schulpartnerschaften'])
+                deaktivateItems(['header-Schulpartnerschaften'])
+                deaktivateItems(['schoolprofiles-content-Schulpartnerschaften-Home', 'schoolprofiles-content-Schulpartnerschaften-China', 'schoolprofiles-content-Schulpartnerschaften-England', 'schoolprofiles-content-Schulpartnerschaften-Frankreich', 'schoolprofiles-content-Schulpartnerschaften-Israel', 'schoolprofiles-content-Schulpartnerschaften-Peru', 'schoolprofiles-content-Schulpartnerschaften-Taiwan', 'schoolprofiles-content-Schulpartnerschaften-Russland'])
+
+                //TG
+                deaktivateItems(['schoolprofiles-content-Foerderverein'])
+                deaktivateItems(['header-Foerderverein'])
+                deaktivateItems(['schoolprofiles-content-Foerderverein-Home'])
+
+                deaktivateItems(['schoolprofiles-content-Orientierungspraktikum'])
+                deaktivateItems(['header-Orientierungspraktikum'])
+                deaktivateItems(['schoolprofiles-content-Orientierungspraktikum-Home'])
+
+                deaktivateItems(['schoolprofiles-content-downloads'])
+                deaktivateItems(['header-downloads'])
+                deaktivateItems(['schoolprofiles-content-downloads-Home'])
+
+                deaktivateItems(['schoolprofiles-content-Verwaltung'])
+                deaktivateItems(['header-Verwaltung'])
+                deaktivateItems(['schoolprofiles-content-Verwaltung-Home'])
+
+                deaktivateItems(['schoolprofiles-content-GdMES'])
+                deaktivateItems(['header-GdMES'])
+                deaktivateItems(['schoolprofiles-content-GdMES-Home'])
+
+                deaktivateItems(['schoolprofiles-content-WBS'])
+                deaktivateItems(['header-WBS'])
+                deaktivateItems(['schoolprofiles-content-WBS-Home', 'schoolprofiles-content-WBS-WBS2011', 'schoolprofiles-content-WBS-WBS2009', 'schoolprofiles-content-WBS-WBS2006', 'schoolprofiles-content-WBS-WBS2005', 'schoolprofiles-content-WBS-WBS2004'])
+
+            }
+        </script>
+        <div id="side-panel">
+            <div id="nav">
+                <h2>Max-Eyth-Schule</h2>
+                <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/c/e/csm_pexels-photo-834949_d692489874.jpeg');
+                                    deaktivateAll();
+                                    aktivateItems([/*'header-img'*/,/*'header-Schuelermitverantwortung'*/,'schoolprofiles-content-Schuelermitverantwortung','schoolprofiles-content-Schuelermitverantwortung-Home']);
+                                    ">Schülermitverantwortung
+                    <img src="../images/icons/Arrow_right_1_Blue.png" alt="">
+                </a>
+                <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/9/c/csm_pexels-photo-212286_47d23782c5.jpeg');
+                                      deaktivateAll();
+                                        aktivateItems([/*'header-img'*/,/*'header-Beratungslehrkreafte'*/,'schoolprofiles-content-Beratungslehrkreafte','schoolprofiles-content-Beratungslehrkreafte-Home']);
+                                        ">Beratungslehrkräfte
+                    <img src="../images/icons/Arrow_right_1_Blue.png" alt=""></a>
+                <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                             deaktivateAll();
+                            aktivateItems([/*'header-img'*/, 'header-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften', 'schoolprofiles-content-Schulpartnerschaften-Home']);
+                            ">Schulpartnerschaften<img src="../images/icons/Arrow_right_1_Blue.png" alt=""></a>
+                <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/7/1/csm_pexels-photo-3184407_296a791143.jpg');
+                deaktivateAll();
+                aktivateItems(['schoolprofiles-content-Foerderverein','schoolprofiles-content-Foerderverein-Home']);
+               ">Förderverein<img src="../images/icons/Arrow_right_1_Blue.png" alt=""></a>
+                <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/6/1/csm_CAD_Fachschule_a6d032c90f.jpg');
+                                     deaktivateAll();
+                                     aktivateItems(['header-img','header-WBS','schoolprofiles-content-WBS','schoolprofiles-content-WBS-Home']);
+                                     ">Wettbewerb
+                    Berufliche Schulen
+                    <img src="../images/icons/Arrow_right_1_Blue.png" alt=""></a>
+                <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/4/4/csm_01_Treppe_nach_oben_266a7183f4.jpg');
+                deaktivateAll();
+                aktivateItems(['header-img','header-Orientierungspraktikum','schoolprofiles-content-Orientierungspraktikum','schoolprofiles-content-Orientierungspraktikum-Home']);
+                ">Orientierungspraktikum
+                    <img src="../images/icons/Arrow_right_1_Blue.png" alt=""></a>
+
+                <a onclick="
+                changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/6/csm_03_Gang_1.Stock_37d3cc35ce.jpg');
+                deaktivateAll();
+                aktivateItems(['header-img','header-Verwaltung','schoolprofiles-content-Verwaltung','schoolprofiles-content-Verwaltung-Home']);
+                ">Verwaltung <img src="../images/icons/Arrow_right_1_Blue.png" alt=""></a>
+
+                <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/f/csm_img_1468-img_1470_b566f609f3.jpg');
+deaktivateAll();
+aktivateItems(['header-img','header-GdMES','schoolprofiles-content-GdMES','schoolprofiles-content-GdMES-Home']);
+">Geschichte der MES <img src="../images/icons/Arrow_right_1_Blue.png" alt=""></a>
+
+                <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/c/7/csm_CAD_Meister_53932f78a6.jpg');
+deaktivateAll();
+aktivateItems([,'schoolprofiles-content-downloads','schoolprofiles-content-downloads-Home']);
+    ">Downloads <img src="../images/icons/Arrow_right_1_Blue.png" alt=""></a>
+            </div>
+            <div id="events">
+                <h2>DIE NÄCHSTEN TERMINE</h2>
+                <script>loadNextCalendarEntrys('../Calendar_content/entry_', 'events', 4)</script>
+            </div>
+        </div>
+        <div id="schoolprofiles">
+            <div id="schoolprofiles-content-header">
+                <div id="headers">
+                    <div id="header-Schuelermitverantwortung" style="display: none;"></div>
+                    <div id="header-Beratungslehrkreafte" style="display: none;"></div>
+
+                    <div id="header-WBS" style="display: none;">
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                                deaktivateAll();
+                             aktivateItems(['header-WBS','schoolprofiles-content-WBS','schoolprofiles-content-WBS-WBS2011'])
+                            ">Wettbewerb 2011</a>
+
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                        deaktivateAll();
+                        aktivateItems(['header-WBS','schoolprofiles-content-WBS','schoolprofiles-content-WBS-WBS2009'])
+                        ">Wettbewerb 2009</a>
+
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                        deaktivateAll();
+                        aktivateItems(['header-WBS','schoolprofiles-content-WBS','schoolprofiles-content-WBS-WBS2006'])
+                        ">Wettbewerb 2006</a>
+
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+deaktivateAll();
+aktivateItems(['header-WBS','schoolprofiles-content-WBS','schoolprofiles-content-WBS-WBS2005'])
+">Wettbewerb 2005</a>
+
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                        deaktivateAll();
+                        aktivateItems(['header-WBS','schoolprofiles-content-WBS','schoolprofiles-content-WBS-WBS2004'])
+                        ">Wettbewerb 2004</a>
+                    </div>
+
+                    <div id="header-Schulpartnerschaften" style="display: none;">
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                                deaktivateAll();
+                             aktivateItems(['header-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften-China'])
+                     ">China</a>
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                      deaktivateAll();
+                       aktivateItems(['header-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften-England'])
+                       ">England</a>
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                       deaktivateAll();
+                        aktivateItems(['header-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften-Frankreich'])
+                        ">Frankreich</a>
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                     deaktivateAll();
+                      aktivateItems(['header-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften-Israel'])
+                      ">Israel</a>
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                     deaktivateAll();
+                      aktivateItems(['header-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften-Peru'])
+                      ">Peru</a>
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                     deaktivateAll();
+                      aktivateItems(['header-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften-Taiwan'])
+                      ">Taiwan</a>
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/e/a/csm_pexels-photo-1111692_9f23de6ed6.jpeg');
+                     deaktivateAll();
+                      aktivateItems(['header-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften','schoolprofiles-content-Schulpartnerschaften-Russland'])
+                      ">Russland</a>
+                    </div>
+                    <div id="header-Foerderverein" style="display: none;"></div>
+
+                    <div id="header-Meisterschule" style="display: none;"></div>
+                    <div id="header-Technikerschule" style="display: none;">
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/c/7/csm_CAD_Meister_53932f78a6.jpg');
+                    deaktivateAll();
+                     aktivateItems(['header-Technikerschule','schoolprofiles-content-Technikerschule','schoolprofiles-content-Technikerschule-Abendschule'])
+                     ">Abendschule</a>
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/c/7/csm_CAD_Meister_53932f78a6.jpg');
+                      deaktivateAll();
+                       aktivateItems(['header-Technikerschule','schoolprofiles-content-Technikerschule','schoolprofiles-content-Technikerschule-Tagesschule'])
+                       ">Tagesschule</a>
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/c/7/csm_CAD_Meister_53932f78a6.jpg');
+                     deaktivateAll();
+                      aktivateItems(['header-Technikerschule','schoolprofiles-content-Technikerschule','schoolprofiles-content-Technikerschule-Abschlussarbeiten'])
+                      ">Technikerarbeiten</a>
+                        <a href="#" onclick="changeImageSource('header-img','https://www.mes-stuttgart.de/fileadmin/_processed_/a/e/csm_pexels-photo-3037549_e5b9cad401.jpeg');
+                     deaktivateAll();
+                      aktivateItems(['header-TG','schoolprofiles-content-TG','schoolprofiles-content-TG-Mechatronik'])
+                      ">Technikerverein der mes Stuttgart e.V.</a>
+                    </div>
+                </div>
+                <img src="https://www.mes-stuttgart.de/fileadmin/_processed_/e/6/csm_03_Gang_1.Stock_37d3cc35ce.jpg"
+                    alt="" id="header-img" style="display: block;">
+            </div>
+
+            <div id="schoolprofiles-content">
+                <div id="schoolprofiles-content-Schuelermitverantwortung" style="display: none;">
+                    <div id="schoolprofiles-content-Schuelermitverantwortung-Home" style="display: block;">
+                        <h1 id="content-title">Schülermitverantwortung (SMV)</h1>
+                        <p>
+                            Die SMV vertritt die Interessen der Schüler/innen gegenüber der Schulleitung und dem
+                            Kollegium Sie organisiert Veranstaltungen wie den Blutspendetag, den Wintersporttag,
+                            LAN-Partys und verschiedene Aktionen (z. B. den Valentinstag, an dem sich die Schule in ein
+                            Rosenmeer verwandelt).
+                        </p>
+                        <p>
+                            Schülersprecher: Alisa Gering
+                            Stellvertreter/in: Paul Godfrey und Yusuf Temür
+                            Abteilungssprecher/innen:
+                        </p>
+                        <p>
+                            --------
+                        </p>
+                        <p>
+                            Verbindungslehrkräfte: Fr. Mann, Fr. Kramer, Herr Weyrich, Herr Heusinger
+                        </p>
+                    </div>
+
+                </div>
+                <div id="schoolprofiles-content-Beratungslehrkreafte" style="display: none;">
+                    <div id="schoolprofiles-content-Beratungslehrkreafte-Home" style="display: block;">
+                        <h1 id="content-title">Beratungslehrkräfte</h1>
+                        <p>
+                            <b>Wer wir sind:</b><br>
+                            Julia Baumhögger (Bau) und Alper Dürüst-Kallas (DüK).
+                            Als Beratungslehrkräfte sind wir Ansprechpartner*in sowohl für Schüler*innen als auch für
+                            Eltern und Lehrer*innen.
+                            <br>
+                            <br>
+                            <b>Wofür sind wir zuständig?</b>
+                            <br>
+                            Unsere Aufgaben beginnen dann, wenn Lehrkräfte, Eltern und Schüler*innen alleine nicht mehr
+                            weiter wissen:
+                        <ul class="custom-list">
+                            <li>Erstens für Fragen zur <b>Schullaufbahn</b>, (welcher Abschluss wird angestrebt? welche
+                                Alternativen gibt es? berufliche Orientierung? mögliche Studiengänge?).</li>
+                            <li>
+                                Zweitens beraten wir bei der Behebung von <b>Schulschwierigkeiten</b>, falls Lehrkräfte
+                                und Eltern diese nicht selbst beseitigen können. Dazu gehören zum Beispiel folgende
+                                Fragen:
+                                <br>
+                                <ul class="custom-list">
+                                    <li>Warum hat der/die Schüler*in so schlechte Noten, obwohl er/sie viel lernt?</li>
+                                    <li>Weshalb kann sich der/die Jugendliche so schlecht konzentrieren?</li>
+                                    <li>Wie kann der/die Schüler*in mit Prüfungsangst umgehen?</li>
+                                </ul>
+
+                            </li>
+                            <li>Drittens sind wir auch eine Anlaufstation bei <b>(Verhaltens)problemen</b> (in der
+                                Schule, im Betrieb, in der Familie oder bei Konflikten im persönlichen Bereich). Bei
+                                größeren Schwierigkeiten würden wir dabei helfen, geeignete Ansprechpartner zu finden.
+                            </li>
+                        </ul>
+                        <br>
+                        <b>Wie gehen wir an diese Aufgaben heran?</b>
+                        Ein großer Teil geschieht in vertraulichen Gesprächen, falls sinnvoll setzen wir Testverfahren
+                        ein. Selbstverständlich gilt für all dies die Schweigepflicht, auch gegenüber anderen
+                        Lehrkräften, den Betrieben und der Schulleitung.
+                        Wenn die Ursachen der Schwierigkeiten dann feststehen, suchen wir gemeinsam mit Lehrer*innen,
+                        Eltern und Schüler*innen nach Lösungswegen, die sie zusammen gehen können
+                        <br>
+                        <br>
+                        <b>Kontaktaufnahmemöglichkeiten</b> (Termine nach Vereinbarung):
+                        <br>
+                        <br>
+                        <a href="" class="download-link"><img src="../images/icons/download-icon_1_Blue.png">In ganz
+                            dringenden Fällen [.docx]</a>
+                        <br>
+                        <ul class="custom-list">
+                            <li>
+                                Während unserer Präsenzzeiten im Beratungsraum A127 oder in unseren Lehrerzimmern:
+                                <ul class="custom-list">
+                                    <li>Bau A404 dienstags 9.20-10.50 Uhr und donnerstags 9.20-10.50 Uhr</li>
+                                    <li>DüK A304 freitags von 11.00-14.00 Uhr</li>
+                                </ul>
+                            </li>
+                            <li>telefonisch unter: <a class="Text-link-text" href="">0711/216-20901</a></li>
+                            <li>per Email: <a class="Text-link-text" href="">dueruest-kallas(at)messtuttgart.de</a>
+                            </li>
+                            <li>oder einfach eine Bitte um Rückmeldung in unserem Fach hinterlegen lassen</li>
+                        </ul>
+                        <br>
+                        Ein Anmeldebogen liegt im ersten Stock aus, bitte ausfüllen!
+                        </p>
+                    </div>
+                </div>
+                <div id="schoolprofiles-content-Schulpartnerschaften" style="display: none;">
+                    <div id="schoolprofiles-content-Schulpartnerschaften-Home" style="display: block;">
+                        <h1 id="content-title">Schulpartnerschaften</h1>
+                        <p>SUnsere Schule pflegt/e eine intensive Partnerschaft mit dem St. Helens College in England,
+                            dem CDAB in China, der National Taichung Industrial High School (TCVIS) in Taiwan sowie dem
+                            Gymnasium 4 aus Samara in Russland. Mit diesen vier Partnern fanden jährlich Besuche,
+                            teilweise auch mit Gegenbesuchen mit vielfältigen Zielsetzungen statt. Corona bedingt und
+                            verschärft noch durch den Krieg in der Ukraine konnten die zum Teil über Jahrzehnte
+                            gewachsenen Schulpartnerschaften in den zurückliegenden zwei Jahren nur digital gelebt
+                            werden, bzw. sind wie im Falle unserer Partnerschaft mit dem Gymnasium 4 in Samara, Russland
+                            zum Erliegen gekommen. Umso mehr freuen wir uns über unsere neue Schulpartnerschaft mit der
+                            Mizgav Highschool im Oberen Galiäa in Israel. Erstmalig war im September 2022 eine Gruppe
+                            von Schülerinnen und Schüler aus der 13’ten Klasse des Technischen Gymnasiums in Israel.
+                        </p>
+                        <p>
+                            Auch sämtliche Aktivitäten im Bereich der EU-Bildungsprogramme „Lebenslanges Lernen“ sowie
+                            ERASMUS+ konnten in den letzten zwei Jahren nicht stattfinden.
+                        </p>
+                        <p>Nähere Informationen zu unseren bisherigen EU-Projektaktivitäten finden Sie <a
+                                class="Text-link-text" href="">hier</a>.</p>
+                    </div>
+                    <div id="schoolprofiles-content-Schulpartnerschaften-China" style="display: none;">
+                        <h1>China</h1>
+                        <p>
+                            Seit 1993 besteht eine Partnerschaft mit dem Chinesisch-Deutschen- Ausbildungszentrum (CDAB)
+                            in Peking. Durch die lange und kontinuierliche Partnerschaft pflegen das CDAB und die
+                            Max-Eyth-Schule eine inzwischen freundschaftliche Beziehung, welche auf gegenseitigem
+                            Verständnis und Respekt gründet. Nachdem der ehemalige Kultusminister Rau vom Land
+                            Baden-Württemberg im Jahr 2006 sich am CDAB von dieser Partnerschaft überzeugen konnte,
+                            fanden jährlich Lehrerfortbildungen entweder in Peking oder in Stuttgart zu pädagogischen
+                            Inhalten am Beispiel der CNC-Technik statt. Im Oktober 2012 fand eine Fortbildung der
+                            chinesischen Lehrkräfte am CDAB zum Thema "das duale System" statt, die von Kollegen der MES
+                            unterstützt wurde.
+                        </p>
+                        <p>
+                            Fand der Austausch bisher lediglich auf Lehrerebene statt, sind wir froh, dass es uns
+                            gelungen ist, im Schuljahr 2015 erstmals auch Schüler/innen nach Peking zu schicken. Wir
+                            haben drei Projekte in den Werkstätten durchgeführt. Angelehnt an den Lehrplan der
+                            Berufsschule und das Profilfach Mechatronik unserer TGler hatten diese einen zerspanungs-,
+                            elektro- und einen steuerungstechnischen Inhalt. Das CDAB war mit seinen hervorragend
+                            ausgestatten Werkstätten und den fachlich sehr guten Kollegen in der Lage, alle Projekte
+                            sehr gut zu begleiten.
+                        </p>
+                        <p>
+                            Seit 2002 bestehen Beziehungen zur beruflichen Fachhochschule in Zhongshan, welche 2006 mit
+                            einem Kooperationsvertrag besiegelt wurden. Auch hier liegt der Fokus auf zeitgemäßer
+                            Berufspädagogik.
+                        </p>
+                    </div>
+                    <div id="schoolprofiles-content-Schulpartnerschaften-England" style="display: none;">
+                        <h1>England</h1>
+                        <p>
+                            Seit 1994 besteht eine Partnerschaft zum St Helens College in England. Diese anfänglich von
+                            Sprachlehrern gepflegte und durch Schüleraufenthalte geprägte Partnerschaft ist inzwischen
+                            so gut ausgebaut, dass wir seit 2007 auch auf der Ebene der Schulleitungen im Bereich der
+                            Qualitätsentwicklung der Schulen zusammenarbeiten. Das St Helens College hat sehr viel
+                            Erfahrung, da dort die Evaluationsergebnisse direkt an die Finanzierung der Colleges
+                            gekoppelt ist. Auch die Dimension ist beeindruckend. Während wir ca. 1700 Schülerinnen und
+                            Schüler haben, gibt es am St Helens College ca. 25000 Schüler.
+                        </p>
+                    </div>
+                    <div id="schoolprofiles-content-Schulpartnerschaften-Frankreich" style="display: none;">
+                        <h1>Frankreich</h1>
+                        <p>
+                            In den 80er Jahren wurde an die Max-Eyth-Schule der Wunsch der O.R.T.-Schule in Strasbourg
+                            nach einer Schulpartnerschaft herangetragen. O.R.T. = organisation, reconstruction, travail.
+                            Die O.R.T.-Schule ist eine staatlich anerkannte Privatschule der jüdischen
+                            Religionsgemeinschaft, wie sie in 52 Ländern existiert, und zwar um den Kindern
+                            verschiedener Religionen den Zugang zu technischen Berufen auf verschiedenen beruflichen
+                            Niveaus zu erleichtern. Beide Schulen sind gewerblich-technische Einrichtungen und haben ein
+                            technisches Gymnasium nach der 9. bzw. 10. KIasse. Das Profil an der O.R.T.-Schule ist
+                            Modedesign, hier gibt es Gemeinsamkeiten mit unserem Profilfach Gestaltung- und
+                            Medientechnik am TG.
+                            Für die Partnerschaft sind in Strasbourg Madame Chazeaux und in Stuttgart Frau Stuby
+                            verantwortlich.
+                        </p>
+                    </div>
+                    <div id="schoolprofiles-content-Schulpartnerschaften-Israel" style="display: none;">
+                        <h1>Israel</h1>
+                        <p>
+                            Seit 2010 haben wir in Kooperation mit dem Land Baden-Württemberg und der Landesakademie für
+                            Lehrerbildung in Esslingen eine Partnerschaft mit dem Ausbidungszentrum Zur Lavon nahe
+                            Naharija in Israel. Dieses Ausbildungszentrum gehört zur Firmengruppe ISCAR, deren Chef Stef
+                            Wertheimer als einer der reichsten Männer Israels gilt. Er gründete mehrere Industrieparks
+                            in und außerhalb Israel. Über seinen Besuch der Max-Eyth-Schule Stuttgart im Frühjahr 2011
+                            haben wir uns sehr gefreut.
+                            In Zur Lavon lässt er Meister im Feinwerk Mechanikerhandwerk ausbilden, die ihre Prüfung vor
+                            der HK Stuttgart ablegen. Zwei Kollegen unserer Schule waren bereits viermal vor Ort, um die
+                            dortigen Kollegen auf die Meisterprüfung vorzubereiten, die dann ihrerseits die israelischen
+                            Schüler auf die Meisterprüfung vorbereiten sollen.
+                            Die Prüfung findet im Ausbildungszentrum Zur Lavon vor einer Prüfungskommission der HK
+                            Stuttgart statt, die eigens zu diesem Zweck anreist. Die ersten acht Absolventen haben im
+                            Frühsommer und Herbst 2012 ihre Prüfung abgelegt.
+                        </p>
+                    </div>
+                    <div id="schoolprofiles-content-Schulpartnerschaften-Peru" style="display: none;">
+                        <h1>Peru</h1>
+                        <p>
+                            Mit der Aus- und Weiterbildungsinstitution TECSUP in Lima und Arequipa verbindet uns eine
+                            über 20 -jährige Zusammenarbeit. Bei TECSUP werden junge Peruanerinnen und Peruaner sehr
+                            praxisorientiert in 6 Semestern zu Technikern ausgebildet. Der Abschluss ist einem
+                            Bachelor-Abschluss gleichwertig. Außerdem bietet TECSUP eine Vielzahl von Kursen im
+                            Weiterbildungsbereich an. TECSUP wurde u.a. mit baden-württembergischer Unterstützung
+                            aufgebaut und ist eines der erfolgreichsten Projekte der internationalen Technischen
+                            Zusammenarbeit des Landes. Unser Schulleiter hat die Schule bereits besucht und den
+                            Grundstein für ein Projekt zur gemeinsamen Curricula-Entwicklung auf bestimmten
+                            Technologiefeldern und einem Erfahrungsaustausch gelegt.
+                        </p>
+                    </div>
+                    <div id="schoolprofiles-content-Schulpartnerschaften-Taiwan" style="display: none;">
+                        <h1>Taiwan</h1>
+                        <p>
+                            Jedes Jahr im November besuchen Schüler aus Taiwan die Max-Eyth-Schule.
+                            Im Februar des folgejahres findet der Gegenbesuch statt.
+                        </p>
+                    </div>
+                    <div id="schoolprofiles-content-Schulpartnerschaften-Russland" style="display: none;">
+                        <h1>Russland</h1>
+                        <p>
+                            Die Partnerschaft mit Samara in Russland besteht seit dem Jahr 2017. In diesem Jahr feierten
+                            die Städte Stuttgart und Samara das Jubiläum ihrer 25 jährigen Städtepartnerschaft. Auf der
+                            Suche nach einer Partnerschule mit dem Ziel, regelmäßige Austausche durchzuführen und über
+                            die Städtepar­tnerstadt hinaus nach verbindenden Elementen zu suchen, fiel das Augenmerk auf
+                            die Max-Eyth-Schule: der Ingenieur und Namensgeber unserer Schule, Max Eyth, hat im Rahmen
+                            seiner beruflichen Aktivitäten mit dem Dampfpflug auch in der Umgebung von Samara seine
+                            Spuren hinterlassen. So wurde im Schuljahr 2017/2018 ein erster Austausch organisiert und
+                            durchgeführt. Aufgrund der äußerst positiven Resonanz waren sich beide Schulen einig, diesen
+                            Austausch fortzuführen. So wurde im Schuljahr 2018/2019 offiziell ein Partnerschaftsvertrag
+                            mit dem Ziel unterzeichnet, die Zusammenarbeit weiter zu fördern und zu festigen.
+                        </p>
+                        <p>
+                            Wir möchten damit Schüler/innen unserer beiden Schulen auch in Zukunft interessante und
+                            erlebnis­reiche Begegnungen ermöglichen, um interkulturelle Kompetenzen vermitteln und
+                            Gelegenheit zu geben, fremde Kulturen kennen zu lernen und so zum Verständnis zwischen den
+                            Völkern beider Länder beitragen.
+                        </p>
+                    </div>
+                </div>
+                <div id="schoolprofiles-content-Foerderverein" style="display: none;">
+                    <div id="schoolprofiles-content-Foerderverein-Home" style="display: block;">
+                        <h1>Förderverein</h1>
+                        <p>Der Förderverein der Max-Eyth-Schule Stuttgart e.V. widmet sich der Fort- und Weiterbildung
+                            in Bereichen der Technik, Medientechnik und Betriebswirtschaftslehre.</p>
+                        <ul class="custom-list">
+                            <li> 1. Vorsitzender Herr Hell, Firma Mahle GmbH</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="schoolprofiles-content-Orientierungspraktikum" style="display: none;">
+                    <div id="schoolprofiles-content-Orientierungspraktikum-Home">
+                        <h1>Zweiwöchiges Orientierungspraktikum als Zulassungsvoraussetzung für das gymnasiale
+                            Lehramtsstudium</h1>
+                        <p>Seit Wintersemester 2010/11 wird das gymnasiale Lehramtsstudium auf der Basis der neuen
+                            Gymnasiallehrerprüfungsordnung I vom 31.07.09 erfolgen. Zulassungsvoraussetzung ist dann
+                            gemäß GymPO I ein zweiwöchiges Orientierungspraktikum an einem Gymnasium oder einer
+                            beruflichen Schule. Dieses kann bis zum Beginn des dritten Semesters absolviert werden. Die
+                            Praktikanten/Praktikantinnen lernen unsere Schule aus der Sicht von Lehrkräften kennen und
+                            erhalten vielfältige Möglichkeiten für orientierende Gespräche.
+                            Wir führen im Technischen Gymnasium neben den üblichen allgemein bildenden Fächern die
+                            berufsbezogenen Profilbereiche Technik, Technik und Management sowie Gestaltungs- und
+                            Medientechnik.
+                            Die Anmeldung zum Orientierungspraktikum erfolgt zentral unter <a
+                                href="www.orientierungspraktikum-bw.de" target="_blank"
+                                class="Text-link-text">www.orientierungspraktikum-bw.de</a>. <br>Für Rückfragen stehen
+                            Frau Gsell und Frau Schal zur Verfügung.</p>
+                    </div>
+                </div>
+
+                <div id="schoolprofiles-content-WBS" style="display: none;">
+                    <div id="schoolprofiles-content-WBS-Home">
+                        <h1>Wettbewerb Berufliche Schulen</h1>
+                        <p>
+                            Seit 2001/2002 veranstaltet die Landesstiftung Baden-Württemberg den Wettbewerb „Berufliche
+                            Schulen“. Er lenkt die öffentliche Aufmerksamkeit auf die Kreativität und das
+                            Leistungsvermögen der Schülerinnen und Schüler in beruflichen Schulen. Seit dem Jahr 2004
+                            nimmt auch unsere Schule daran teil. Damals erreichten Schüler unserer Fachschule einen 3.
+                            Preis. Im Jahr 2005 gelang uns eine kleine Sensation. Wir erreichten in der Gruppe 4 mit
+                            unserem Technischen Gymnasium einen 3. Platz und mit unserer Fachschule einen 1. Platz.
+                        </p>
+                        <P>
+                            Mit der feierlichen Preisverleihung und einer Ausstellung der prämierten Projekte wird das
+                            Potential, das in den beruflichen Schulen steckt, einer breiten Öffentlichkeit zugänglich
+                            gemacht.
+                        </P>
+                    </div>
+                    <div id="schoolprofiles-content-WBS-WBS2011" style="display: none;">
+                        <h1>Wettbewerb 2011</h1>
+                        <h2>Das Boot - Ein Projekt des BVJ für Förderschülerinnen und Förderschüler</h2>
+                        <p>
+                            "Das Boot" ist ein Individualprojekt, das unser Werkstattlehrer für Holz, Thomas Käszmann,
+                            ins Leben gerufen hat.
+                            Seine Schülerinnen und Schüler des Berufsvorbereitungsjahrs der Max-Eyth-Schule Stuttgart
+                            erreichten beim Wettbewerb „beo“ 2011 der Landesstiftung Baden-Württemberg den dritten Platz
+                            in der Gruppe 2 (Berufsvorbereitungsjahr / Berufsfachschule) .
+                        </p>
+                        <P>
+                            Uns so haben die Schülerinnen und Schüler die Projektarbeit erlebt:
+                        </P>
+                        <h3>Projekt</h3>
+                        <p>
+                            Wir haben uns klassenübergreifend zu einem Team zusammengefunden. Wir wollten lernen
+                            miteinander auszukommen und zusammen etwas erreichen und schaffen. Gleichzeitig wollten wir
+                            alle handwerklichen Fertigkeiten üben und festigen. Das sollte uns helfen im Berufsleben
+                            einen besseren Start zu haben oder wie unser Lehrer, Herr Käszmann, sagen würde:
+                            Fachkompetenz ohne Sozialkompetenz reicht in der heutigen Arbeitswelt nicht aus.
+                        </p>
+                        <h3>Erfolg</h3>
+                        <p>
+                            Der Bau des Bootes hat unserer Klassengemeinschaft gut getan. Gemeinsam haben wir
+                            gearbeitet, haben Vertrauen zueinander gewonnen und gelernt, wie man gemeinsam vieles
+                            erreichen kann. Wir haben gelernt anders miteinander zu sprechen und uns verständlich zu
+                            machen. Wir sind in Bewegung gekommen und werden bei der Benutzung des Bootes in Bewegung
+                            bleiben. Unsere nächste Ausfahrt haben wir bereits geplant. Unser Boot soll das erste in
+                            einer großen Familie sein. Weiter Ausfahrten auch mit folgenden Klassen sind geplant. Wir
+                            wollen im „Gespräch“ bleiben. Ein großartiges Gefühl.
+                        </p>
+                    </div>
+                    <div id="schoolprofiles-content-WBS-WBS2009" style="display: none;">
+                        <h1>Wettbewerb 2009</h1>
+                        <p>
+                            1. Platz in der Gruppe 4: Berufliches Gymnasium, Berufsoberschule und Fachschule
+                        </p>
+                        <h3>Fahrradwaschanlage</h3>
+                        <p>
+                            Endlich haben wir sie: die vielbegehrte Beo-Trophäe!
+                        </p>
+                    </div>
+                    <div id="schoolprofiles-content-WBS-WBS2006" style="display: none;">
+                        <h1>Wettbewerb 2006</h1>
+                        <p>
+                            2. Platz in der Gruppe 4: Berufliches Gymnasium, Berufsoberschule und Fachschule
+                        </p>
+                        <h3>Mausefallenrennen (mousetrap-race)</h3>
+                        <p>
+                            Wie in den vergangenen Jahren waren wir auch dieses Jahr wieder zu diesem außergewöhnlichen
+                            Wettbewerb der Landesstiftung angetreten. Leider reichte es nicht zu einem ersten Platz und
+                            somit zu der begehrten Beo-Trophäe, aber mit dem zweiten Platz waren wir auch zufrieden.
+                            Unser Beitrag war das 'Moustrap-race', welches seit zwei Jahren an unserer Schule
+                            durchgeführt wird. Die Organisatoren haben sich dieses Jahr auch etwas Neues einfallen
+                            lassen. Die Präsentation der Sieger fand nämlich auf dem Stuttgarter Schlossplatz statt. Das
+                            Projekt wurde betreut von unserem Dreamteam Schick und Schöck. Im Bild sehen Sie leider nur
+                            Herrn Gerd Schick, da Herr Kurt Schöck just an der Präsentation leider im Krankenhaus lag.
+                            Herr Schick gab sich kampfeslustig und sagte schmunzelnd, dass die Jagd auf den Beo eröffnet
+                            ist.
+                        </p>
+                    </div>
+                    <div id="schoolprofiles-content-WBS-WBS2005" style="display: none;">
+                        <h1>Wettbewerb 2005</h1>
+                        <p>
+                            Sensation - Zwei Preise im Jahr 2005
+                        </p>
+                        <p>1. Platz in der Gruppe 4: Berufliches Gymnasium, Berufsoberschule und Fachschule</p>
+                        <h3>Motorgetriebene Inlineskates</h3>
+                        <p>
+                            Projektteam: Schüler. unserer Fachschule für Technik, Fachrichtung Maschinentechnik
+                        </p>
+                        <p>
+                            Projektbeschreibung: Das Projekt „Motorgetriebene Inlineskates“ beinhaltet die Entwicklung
+                            und Konstruktion sowie die Fertigung und die ersten Testläufe. Die Stromversorgung erfolgt
+                            über einen 12 V Akku, welcher am Körper getragen wird. Zur Kraftübertragung wird ein
+                            Keilriemen eingesetzt, der den Elektromotor und die angetriebene Inlineskaterolle verbindet.
+                            Die Schiene wurde aus Aluminium an einer CNC-Fräsmaschine gefertigt und an den Schuh
+                            geschraubt. Nach den ersten Testläufen kamen unsere Techniker zu folgenden Ergebnissen:
+                        </p>
+                        <ul class="custom-list">
+                            <li>jede Fahrgeschwindigkeit konnte nach kurzem „Anskaten“ gehalten werden</li>
+                            <li>geringe Reibverluste</li>
+                            <li>leiser Lauf</li>
+                            <li>hohe Stromaufnahme der Motoren</li>
+                        </ul>
+                        <p>3. Platz in der Gruppe 4: Berufliches Gymnasium, Berufsoberschule und Fachschule</p>
+                        <h3>Baden-Württemberg meets Sachsen</h3>
+                        <p>Projektteam: Schülerinnen und Schüler unseres Technischen Gymnasiums</p>
+                        <p>
+                            Projektbeschreibung: Das Herzstück des Projekts war die einwöchige Studienfahrt nach Leipzig
+                            im November 2004. Die Schüler bildeten Expertenteams, zuständig für die Ausarbeitung von
+                            'Interviews' und deren Durchführung bei folgenden hochkarätigen Partner aus verschiedenen
+                            Bereichen in Leipzig:
+                        </p>
+                        <p>
+                            Wirtschaft: BMW, Siemens, Porsche, Reudnitzer Brauhaus, das Wirtschaftsreferat der Stadt
+                            Leipzig
+                            Kultur: Gewandhaus, Mitteldeutscher Rundfunk, Die Prinzen, academixer,
+                            Bürgerkomitee/Stasi-Museum 'Runde Ecke'
+                            Bildung/Ausbildung: Karl-Heine- Schule Leipzig
+                        </p>
+                        <p>
+                            Nach einer Führung durch die Karl-Heine-Schule und einer Präsentation über die MES bauten
+                            die Stuttgarter und die Leipziger zusammen Eierflugmaschinen. So lernte man sich ganz
+                            nebenbei und mit viel Spaß näher kennen.
+                        </p>
+                        <p>
+                            Resümee: 'die sind wie wir!'
+                            Am 'Praktikumstag' bei Porsche und Siemens arbeiteten die Schüler für einen Tag in 2er-
+                            Gruppen mit Auszubildenden. Sie bekamen Einblick in für sie relevante Branchen und hatten
+                            viel Zeit, sich mit Gleichaltrigen zu unterhalten.
+                        </p>
+                    </div>
+                    <div id="schoolprofiles-content-WBS-WBS2004" style="display: none;">
+                        <h1>Wettbewerb 2004</h1>
+                        <p>
+                            3. Platz in der Gruppe 4: Berufliches Gymnasium, Berufsoberschule und Fachschule
+                        </p>
+                        <h3>Dieselauto fährt mit normalem Salatöl!</h3>
+                        <p>Projektteam: Schüler unserer Fachschule für Technik, Fachrichtung Maschinentechnik</p>
+                        <p>
+                            Projektbeschreibung: Das Fahrzeug verfügt über einen separaten Pflanzenöltank. Eine
+                            Kraftstoffpumpe fördert das Pflanzenöl mit 0,5 bar zum Motor. Zwei Rückschlagventile
+                            verhindern das Zurücklaufen von Kraftstoff in den Pflanzenöltank. Im Motorraum ist ein
+                            Wärmetauscher angeschlossen. Er wird zur Erwärmung des Pflanzenöls auf 80 - 90° C verwendet.
+                            Der Kraftstofffilter entfernt Verunreinigungen und kleine Partikel. Das Magnetventil für das
+                            Umschalten zwischen den beiden Kraftstoffen kann über einen Kippschalter im Armaturenbrett
+                            betätigt werden: •Bei Dieselbetrieb bedient sich der Motor aus dem Serientank. Es werden
+                            keine Veränderungen im Dieselkreislauf vorgenommen. Bei Pflanzenölbetrieb schließt das
+                            Magnetventil die Dieselleitung und der Motor wird vollständig mit Pflanzenöl versorgt. Für
+                            Winterbetrieb befindet sich unter dem Pflanzenöltank eine Tankheizung, da das Öl bei tiefen
+                            Temperaturen zu zähflüssig wird. Sie wird mit der Abwärme des Motors betrieben.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="schoolprofiles-content-Verwaltung" style="display: block;">
+                    <div id="schoolprofiles-content-Verwaltung-Home">
+                        <h1>Verwaltung</h1>
+                        <p>Hier finden Sie Informationen zum Sekretariat und zur Organisation unserer Schule.
+                            Besuchen Sie auch unsere Informationen zu den Schulpartnerschaften, dem Förderverein, zu
+                            etwas Geschichtlichem, der Schülermitverantwortung und einem besonderen Wettbewerb für
+                            berufliche Schulen.</p>
+                        <h2>Organigramm</h2>
+                        <a href="https://www.mes-stuttgart.de/fileadmin/public/Organigramm_waagrecht_Stand_23-12-01.pdf"
+                            target="_blank" class="Text-link"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">
+                            Organigramm</a>
+                    </div>
+                </div>
+
+                <div id="schoolprofiles-content-GdMES" style="display: none;">
+                    <div id="schoolprofiles-content-GdMES-Home">
+                        <h1>Geschichte der MES</h1>
+                        <p>
+                            Unsere Schule ist nach dem schwäbischen Ingenieur und Schriftsteller Max Eyth (1836-1909)
+                            benannt.
+                            Max Eyth, der über eine Berufsausbildung zum Ingenieurstudium kam, arbeitete u. a. in
+                            verschiedenen Ländern Asiens und Afrikas. In seinen Büchern beschäftigt er sich mit dem
+                            Verhältnis des Menschen zur Technik. Bekannteste Werke sind seine Autobiographie "Hinter
+                            Pflug und Schraubstock" und der Roman "Der Schneider von Ulm".
+                            Die Max-Eyth-Schule ist Nachfolgerin der ehemaligen Jobstschule, der zentralen gewerblichen
+                            Berufsschule in Stuttgart, die vorzugsweise industrielle und handwerkliche Berufe schulisch
+                            begleitete. Durch das sprunghafte Ansteigen der Schülerzahlen vor allem in den Maschinenbau-
+                            und Elektroberufen wuchs in den fünfziger Jahren die Jobstschule zu einer Mammutschule mit
+                            über 4000 Schülern an. Deshalb wurde im Jahr 1960 eine Aufteilung in zwei selbständige
+                            Schulen beschlossen. Die Max-Eyth-Schule bezog 1962 mit ihren Maschinenbauberufen den Neubau
+                            an der Fritz-Elsas-Straße, während die Werner-Siemens-Schule inzwischen ein Zuhause in der
+                            Heilbronner Straße hat. Mit 14 Schulräumen im Treffpunkt Rotebühlplatz, die im Jahr 1992
+                            dazu kamen, verfügt die MES heute über eine zusammenhängende Schulanlage in der Stadtmitte,
+                            die die äußeren Anforderungen an eine moderne Ausbildung erfüllt. Zur Zeit unterrichten etwa
+                            110 Lehrerinnen und Lehrer 1650 Schülerinnen und Schüler im Teilzeit- und Vollzeitbereich.
+                        </p>
+                        <h2>Wer war Max Eyth?</h2>
+                        <video width="600" controls="" no-cookie="" class="video-embed-item">
+                            <source src="https://www.mes-stuttgart.de/fileadmin/public/video/VID-20210429-WA0003.mp4"
+                                type="video/mp4">
+                        </video>
+                        <p>Fotografie: Frank Pichler, Frankfurt am Main</p>
+                    </div>
+                </div>
+
+                <div id="schoolprofiles-content-downloads" style="display: none;">
+                    <div id="schoolprofiles-content-downloads-Home">
+                        <div id="download-links">
+
+                            <div id="top-download-links">
+                                <h2>Top Downloads</h2>
+                                <a class="download-link" href=""><img src="../images/icons/download-icon_1_Blue.png"
+                                        alt="">Bildungsweg:
+                                    Deutsch [.pdf]</a>
+                                <a class="download-link" href=""><img src="../images/icons/download-icon_1_Blue.png"
+                                        alt="">Bildungsweg:
+                                    Französisch [.pdf]</a>
+                                <a class="download-link" href=""><img src="../images/icons/download-icon_1_Blue.png"
+                                        alt="">Bildungsweg:
+                                    Spanisch [.pdf]</a>
+                                <a class="download-link" href=""><img src="../images/icons/download-icon_1_Blue.png"
+                                        alt="">Bildungsweg:
+                                    Englisch [.pdf]</a>
+                                <a class="download-link" href=""><img src="../images/icons/download-icon_1_Blue.png"
+                                        alt="">Schulwochen:
+                                    2020/21 (Stand: 29.07.2020) [.pdf]</a>
+
+                            </div>
+                            <div id="downloads-sorted">
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>Technikerverein</h2>
+                                        <img id="technikerverein-folder-btn"
+                                            src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('technikerverein-download-content', 'block', 'technikerverein-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="technikerverein-download-content"
+                                        style="display: none;">
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TKV
+                                            Flyer [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TKV
+                                            Mitgliedsantrag [.pdf]</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>BFS</h2>
+                                        <img id="BFS-folder-btn" src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('BFS-download-content', 'block', 'BFS-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="BFS-download-content"
+                                        style="display: none;">
+                                        <h3>Infoflyer</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">BFS
+                                            Flyer [.pdf]</a>
+                                        <h3>Anmeldungsverfahren</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">BewO
+                                            Flyer 2BFS [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Notenauszug mit
+                                            Anschreiben [.pdf]</a>
+                                        <h3>Formulare</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png"
+                                                alt="">Abwesendheitsmeldung [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Beurlaubung
+                                            [.pdf]</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>BK</h2>
+                                        <img id="BK-folder-btn" src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('BK-download-content', 'block', 'BK-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="BK-download-content"
+                                        style="display: none;">
+                                        <h3>Formulare</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png"
+                                                alt="">Abwesendheitsmeldung [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Beurlaubungsantrag
+                                            [.pdf]</a>
+                                        <h3>Informationen</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">BK
+                                            Information 2023 [.pdf]</a>
+                                        <h3>Infoflyer</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Flyer Berufskolleg
+                                            [.pdf]</a>
+                                        <h3>Anmeldeverfahren</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">BewO
+                                            Flyer [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">BewO
+                                            Bewerbung Hilfe [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Notenauszug mit
+                                            Anschreiben [.pdf]</a>
+                                    </div>
+                                </div>
+
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>TG</h2>
+                                        <img id="TG-folder-btn" src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('TG-download-content', 'block', 'TG-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="TG-download-content"
+                                        style="display: none;">
+                                        <h3>Formulare</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png"
+                                                alt="">Abwesendheitsmeldung [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Beurlaubungsantrag
+                                            [.pdf]</a>
+                                        <h3>Allgemeine Informationen zur Oberstufe</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Neue
+                                            Oberstufe am BG [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Fremdsprachen am
+                                            Beruflichen Gymnasium [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Leitfaden Abitur
+                                            2024 [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Leitfaden Abitur
+                                            2025 [.pdf]</a>
+                                        <h3>Informationen und Termine</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TG
+                                            Information Abitur 2024 [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TG
+                                            Information 2023 [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TG
+                                            Info Jahrgangsstufe 2023/24 [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TG
+                                            Info Abitur 2023/24 [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TG
+                                            Info Abitur Jahrgangsstufe [.ppt]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TG
+                                            Info Abitur 2022/23 [.ppt]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TG-BK Infotag 2024
+                                            [.pdf]</a>
+                                        <h3>Anmeldeverfahren für das Technische Gymnasium</h3>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">BewO
+                                            Anmeldeverfahren Flyer [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">BewO
+                                            Notenauszug mit Anschreiben [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">BewO
+                                            Bewerbung Hilfe [.pptx]</a>
+                                    </div>
+                                </div>
+
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>6-jähriges Technisches Gymnasium</h2>
+                                        <img id="JTG-folder-btn" src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('JTG-download-content', 'block', 'JTG-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="JTG-download-content"
+                                        style="display: none;">
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TG-6
+                                            Flyer [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">TG-6
+                                            Anmeldungs Formular [.pdf]</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>VAB</h2>
+                                        <img id="VAB-folder-btn" src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('VAB-download-content', 'block', 'VAB-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="VAB-download-content"
+                                        style="display: none;">
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">VAB
+                                            Flyer [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">VAB
+                                            Anmeldung [.pdf]</a>
+                                    </div>
+                                </div>
+
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>Technikerschule</h2>
+                                        <img id="TS-folder-btn" src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('TS-download-content', 'block', 'TS-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="TS-download-content"
+                                        style="display: none;">
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Technikerschule
+                                            Flyer [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Technikerschule
+                                            Anmeldung [.pdf]</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>Meisterschule</h2>
+                                        <img id="MS-folder-btn" src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('MS-download-content', 'block', 'MS-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="MS-download-content"
+                                        style="display: none;">
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Meisterschule
+                                            Flyer [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Meisterschule
+                                            Anmeldung [.pdf]</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>Max-Eyth-Schule</h2>
+                                        <img id="MES-folder-btn" src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('MES-download-content', 'block', 'MES-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="MES-download-content"
+                                        style="display: none;">
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Bildungsweg:
+                                            Deutsch [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Bildungsweg:
+                                            Französisch [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Bildungsweg:
+                                            Spanisch [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Bildungsweg:
+                                            Englisch [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Schulwochen:
+                                            2023/24 [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Schulwochen:
+                                            2023/24 [.xlsx]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Schulwochen:
+                                            2024/25[.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Schulwochen:
+                                            2024/25[.xlsx]</a>
+                                    </div>
+                                </div>
+
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>Berufsschule</h2>
+                                        <img id="BS-folder-btn" src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('BS-download-content', 'block', 'BS-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="BS-download-content"
+                                        style="display: none;">
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Berufsschule Flyer
+                                            [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Berufsschule
+                                            Abmeldeformular [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Antrag auf
+                                            Gestattung des Besuches einer anderen als der zuständigen
+                                            Berufsschule[.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Schulwochen:
+                                            2023/24 [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Schulwochen:
+                                            2023/24 [.xlsx]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Schulwochen:
+                                            2024/25[.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">Schulwochen:
+                                            2024/25[.xlsx]</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="download-folder-category">
+                                    <div class="download-folder-headline">
+                                        <h2>TG: MES Flyer</h2>
+                                        <img id="TGMES-folder-btn" src="../images/icons/Arrow_right_3_Black.png"
+                                            onclick="setFolderState('TGMES-download-content', 'block', 'TGMES-folder-btn', '90deg')">
+                                    </div>
+                                    <div class="download-folder-content" id="TGMES-download-content"
+                                        style="display: none;">
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">6
+                                            jähriges TG Flyer [.pdf]</a>
+                                        <a class="download-link" href=""><img
+                                                src="../images/icons/download-icon_1_Blue.png" alt="">3
+                                            jähriges TG Flyer [.pdf]</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <button onclick="scrollToTop()" id="toTopButton"><img src="../images/icons/Arrow_right_3_Black.png" alt=""></button>
+
+
+    <div id="CookieConsentWindow" style="display: none;">
+        <h2>Wir verwenden Cookies</h2>
+        <p>Diese Website benutzt Cookies, die für den technischen Betrieb der Website erforderlich sind und stets
+            gesetzt werden.</p>
+        <a href="../pages/impressum.html#data-protection-conteiner" class="Text-link"><img
+                src="../images/icons/Arrow_right_1_Blue.png" alt="">Datenschutz</a>
+        <a id="consent_btn" onclick="consentCookies()">Annehmen</a>
+    </div>
+
+    <script>readCookies()</script>
+
+    <footer>
+        <div id="footer_Items">
+            <img id="footer_MES_logo" src="../images/logos/mes-logo-weiss_blau-gelb.png" alt="">
+            <div id="footer_Content">
+                <div id="footer_Contact" class="footer_Item">
+                    <h3>Kontakt</h3>
+                    <p>Max-Eyth-Schule<br>
+                        Fritz-Elsas-Straße 29<br>
+                        70174 Stuttgart<br><br>
+                        <a href="tel:071121620901"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Telefon:
+                            0711 21620901</a><br>
+                        <a href="tel:0711216-20909"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Fax:
+                            0711 216-20909</a><br>
+                        <a href="mailto:info@messtuttgart.de"> <img src="../images/icons/Arrow_right_1_Blue.png"
+                                alt="">E-Mail: info@messtuttgart.de</a>
+                    </p>
+                </div>
+                <div id="footer_nav" class="footer_Item">
+                    <h3>Navigation</h3>
+                    <p>
+                        <a href="../../index.html"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Über
+                            uns</a><br>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Schulprofiele</a><br>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Aktuelles</a><br>
+                        <a href="../pages/kontakt.html"><img src="../images/icons/Arrow_right_1_Blue.png"
+                                alt="">Kontakt</a><br>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Intern</a><br>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">FAQ</a>
+                    </p>
+                </div>
+                <div id="footer_direct-link" class="footer_Item">
+                    <h3>Direkt</h3>
+                    <p>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Moodle</a><br>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Untis</a><br>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Koopano</a><br>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Microsoft 365</a><br>
+                    </p>
+                </div>
+                <div id="footer_info" class="footer_Item">
+                    <h3>Information</h3>
+                    <p>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Anmeldungs
+                            verfahren</a><br>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Geschichte</a><br>
+                        <a href="#"><img src="../images/icons/Arrow_right_1_Blue.png" alt="">Education
+                            Generale</a><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer_legal">
+            <p>©2024 Max-Eyth-Schule Stuttgart</p>
+            <div>
+                <a href="../pages/impressum.html">Impressum</a>
+                <a href="../pages/impressum.html#data-protection-conteiner">Datenschutz</a>
+                <a href="">Design</a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
