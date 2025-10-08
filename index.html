@@ -2,46 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gio-79 GitHub Page</title>
-    <link rel="stylesheet" href="./source/main.css">
-    <link rel="icon" href="./images/317712_code repository_github_repository_resource_icon.png">
+    <title>Document</title>
+
+    <!--Style-->
+    <link rel="stylesheet" href="./src/style/main.css">
 </head>
 <body>
-    <header>
-        <div id="profile">
-            <img id="profile-picture" src="./images/Walle-Profiel.jpg" alt="" srcset="">
-        </div>
-        <p id="IdName">Gio-79</p>
-        <div id="social-dock">
-            <a href="https://github.com/Gio-79"> <img src="./images/317712_code repository_github_repository_resource_icon.png" alt="" srcset=""></a>
-    
+    <header id="Header">
+        <img id="profilePicture" src="https://avatars.githubusercontent.com/u/122660606?v=4" alt="">
+        <h1>Gio-79</h1>
+        <div id="Navbar">
+            <a id="OverviewLink" href="#" onclick="setActivepage(1)">Overview</a>
+            <a id="ProjectsLink" href="#" onclick="setActivepage(2)">Projects</a>
+            <a id="ToolsLink" href="#" onclick="setActivepage(3)">Tools</a>
+            <a href="https://github.com/Gio-79" target="_blank" >GitHub</a>
         </div>
     </header>
-    <div id="content">
-        <div id="Projects-section" style="display: block;">
-            <h1>Projects</h1>
-            <div  id="projects">
-
-                <div class="projectButton" id="RoboHand" style="display: none;">
-                    <a href=""><img src="https://64.media.tumblr.com/06a026bb4f134b352bbfdb154d7eb7b4/tumblr_mzlo0q2VOg1s27u9no1_1280.jpg" width="100px" height="100px">
-                    <h3>Arduino Hand</h3></a>
-                </div>
-
-                <div class="projectButton" id="RoboHand" style="display: none;">
-                    <a href="./ProjectSites/"><img src="https://images.squarespace-cdn.com/content/v1/59b037304c0dbfb092fbe894/1585684015008-OI2VX4NBE9PSKXK192GY/HC_SR04_w_MG90S_radar_wired.JPG?format=2500w" width="100px" height="100px">
-                    <h3>Arduino Radar</h3></a>
-                </div>
-
-                <div class="projectButton" id="ServoControllerApp">
-                    <a href="./ProjectSites/ServoControllerSoftware/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX8viTZCE2WQ1TbNBycFMDvaljYc7kzkM_DdR9kcmsLeg7xd7TQ1tiP7bscX9Vubskpuw&usqp=CAU" width="100px" height="100px">
-                    <h3 style="font-size: 14px;">Arduino Servo Controller</h3></a>
-                </div>
-
-            </div>
-            <hr>
-        </div>
+    <div id="sidebar">
+        <a href="#" onclick="setActivepage(1)" ><img src="https://cdn-icons-png.flaticon.com/128/69/69524.png" alt=""></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2482/2482391.png" alt=""></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111432.png" alt=""></a>
+        <a href="#" onclick="Themebutton()"><img src="https://cdn-icons-png.flaticon.com/128/8979/8979977.png" alt=""></a>
     </div>
+
+    <div id="overviewPage">
+
+    </div>
+
+    <div id="projectsPage">
+
+    </div>
+
+    <div id="toolsPage">
+        <h1>Calculators</h1>
+        <div id="calculators">
+            <div class="line" id="line-1">
+                <a href="./src/pages/tools/resistorColorcodeCalc.html"><div class="calculatorLink" id="resistorCalculator">
+                    <h2>Resistor Color code</h2>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5151/5151250.png" alt="">
+                </div></a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!--Script-->
+    <script src="./src/script/main.js"></script>
 </body>
 </html>

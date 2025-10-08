@@ -1,0 +1,165 @@
+:root{
+    /*colors*/
+    /*dark*/
+    
+    --textColor:white;
+    --borderColor:rgb(36, 41, 46);
+    --backgroundColorDark:rgb(1, 5, 10);
+    --backgroundColorDarkTransparent:rgb(1, 5, 10, 0.92);
+    --backgroundColorLight: rgb(12, 14, 18);
+    --underlineColor:rgb(242, 107, 84 );
+    --greenColor: rgb(47,115,52);
+  /*
+    --textColor:black;
+    --borderColor:rgb(215, 215, 215);
+    --backgroundColorDark:rgb(223, 223, 223);
+    --backgroundColorLight: rgb(238, 238, 238);
+    --underlineColor:rgb(2, 116, 255);
+*/
+  
+}
+
+body{
+    margin: 0;
+    background-color:var(--backgroundColorLight);
+    color: var(--textColor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: var(--backgroundColorDarkTransparent);
+    border-color: var(--borderColor);
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    backdrop-filter: blur(30px);
+}
+
+header #profilePicture{
+    width: 150px;
+    border-radius:50%;
+    padding: 30px;
+}
+
+header h1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10px;
+}
+
+
+header #Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #Navbar a{
+    padding: 0 5px 12px 5px;
+    margin: auto 5px auto 5px;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--textColor);
+    border-color: var(--underlineColor);
+    border-style: solid;
+    border-width: 0 0 0 0;
+}
+
+header #Navbar a:hover{
+    /*border-width: 0 0 2px 0;
+    padding:0 5px 10px 5px ;*/
+    text-decoration: underline;
+    text-decoration-color: var(--underlineColor);
+    text-decoration-thickness: 2px;
+}
+
+
+#sidebar{
+    position: fixed;
+    right: 1%;
+    top:calc(50% - 170px / 2);
+
+    height: 200px;
+    width: 70px;
+
+    border-radius: 15px;
+    background-color: rgba(26, 85, 230);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#sidebar a img{
+    width: 44px;
+    border-radius: 50%;
+}
+
+#sidebar a img:hover{
+    border-color: white;
+    border-width: 3px;
+    width: 39px;
+    border-style: solid;
+}
+
+#overviewPage, #projectsPage, #toolsPage{
+    margin: 300px 20px auto 20px;
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 216px;
+}
+
+
+#calculators{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#calculators a{
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+#calculators .line{
+   display: flex;
+   align-items: center;
+   justify-content: start;
+}
+
+#calculators .line .calculatorLink{
+    background-color: var(--backgroundColorDark);
+    padding: 20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--borderColor);
+    margin: auto 10px auto 10px;
+ }
+
+ #calculators .line .calculatorLink:hover{
+    border-color: var(--underlineColor);
+    cursor: pointer;
+ }
+
+ #calculators .line .calculatorLink img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+    width: 120px;
+ }
+
+ #calculators .line .calculatorLink h2{
+    margin-top: 0px;
+ }

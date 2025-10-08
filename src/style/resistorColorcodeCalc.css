@@ -1,0 +1,133 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header img{
+    width: 128px;
+    transform: rotateZ(-90deg);
+    
+}
+
+#DynamicResistorBox{
+    margin: 200px 20px auto 20px;
+    display: flex;
+    justify-content: center;  
+    text-align: center;
+}
+
+#DynamicResistorBox #dynamicResistor #resistorLegs{
+    position: relative;
+    left: 50%;
+    margin-top: 20px;
+    transform:translate(-50%);
+    padding: 5px 250px;
+    background-color: gray;
+}
+
+#DynamicResistorBox #dynamicResistor #resistorLegs #ressistorBody{
+    position: absolute;
+    left: 50%;
+    margin-top: -20px;
+    transform:translate(-50%);
+    padding: 20px 100px;
+    background-color: rgb(243, 194, 78);
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#DynamicResistorBox #dynamicResistor #resistorLegs #ressistorBody #resistorColor_1{
+    position: absolute;
+    padding: 5px;
+    left: calc((100% / 6 - 5px) * 1);
+    top: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+#DynamicResistorBox #dynamicResistor #resistorLegs #ressistorBody #resistorColor_2{
+    position: absolute;
+    padding: 5px;
+    left:  calc((100% / 6 - 5px) * 2);
+    top: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+#DynamicResistorBox #dynamicResistor #resistorLegs #ressistorBody #resistorColor_3{
+    position: absolute;
+    padding: 5px;
+    left:  calc((100% / 6 - 5px) * 3);
+    top: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+#DynamicResistorBox #dynamicResistor #resistorLegs #ressistorBody #resistorColor_4{
+    position: absolute;
+    padding: 5px;
+    left:  calc((100% / 6 - 5px) * 4);
+    top: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+#DynamicResistorBox #dynamicResistor #resistorLegs #ressistorBody #resistorColor_5{
+    position: absolute;
+    padding: 5px;
+    left:  calc((100% / 6 - 5px) * 5);
+    top: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+#DynamicResistorBox #dynamicResistor #resistorLegs #ressistorBody #resistorColor_6{
+    position: absolute;
+    padding: 5px;
+    left:  calc((100% / 6 - 5px) * 6);
+    top: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#content #OhmText{
+    margin-top: 40px;
+}
+
+.colorPaleteColor{
+    border-width: 1px;
+    border-color: var(--borderColor);
+    border-style: solid;
+    text-align: center;
+    padding: 10px;
+}
+
+#Palete_1 p{
+    margin: auto 0 auto 0;
+}
+
+#color_1{background-color: black; color: white;}
+#color_2{background-color: brown;}
+#color_3{background-color: red;}
+#color_4{background-color: orange;}
+#color_5{background-color: yellow; color: black;}
+#color_6{background-color: green;}
+#color_7{background-color: rgb(107, 107, 255);}
+#color_8{background-color: violet;}
+#color_9{background-color: gray;}
+#color_10{background-color: white; color: black;}
+#color_11{background-color: gold;}
+#color_12{background-color: silver;}
