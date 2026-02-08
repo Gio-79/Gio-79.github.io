@@ -1,0 +1,141 @@
+/* === KUGEL HEADER ANIMATION === */
+
+/* 1. Initialer Zustand - Kugel oben außerhalb */
+#fastNavigationHeader {
+    position: fixed;
+    top: -100px; /* Startposition außerhalb oben */
+    left: 50%;
+    transform: translateX(-50%) scale(0.1);
+    z-index: 1000;
+    
+    /* Kugel Styling */
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: linear-gradient(180deg, 
+    
+      #34C759,    /* Grün */
+      #007AFF,    /* Blau */
+       #5856D6,    /* Lila */
+       #AF52DE     /* Pink */
+    );
+    background: linear-gradient(135deg, #4a6cf7 0%, #ff6b6b 100%);
+    box-shadow: 
+        0 0 30px rgba(74, 108, 247, 0.5),
+        inset 0 0 20px rgba(255, 255, 255, 0.3);
+
+        background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px) saturate(70%);
+     -webkit-backdrop-filter: blur(5px) saturate(70%);
+    
+    /* Animationseigenschaften */
+    transition: 
+        top 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+        transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+        width 0.6s ease 0.3s,
+        height 0.6s ease 0.3s,
+        border-radius 0.6s ease 0.3s,
+        background 0.6s ease 0.3s;
+    
+    /* Inhalt verstecken */
+    overflow: hidden;
+    opacity: 0;
+    
+    /* WICHTIG: Sichtbar aber transparent */
+    visibility: visible;
+}
+
+/* 2. Wenn gescrollt wird - Header erscheint */
+#fastNavigationHeader.visible {
+    opacity: 1;
+    top: 50px; /* Endposition */
+    transform: translateX(-50%) scale(1);
+    
+    /* Transformation zu Header */
+    border-color: linear-gradient(180deg, 
+    
+      #34C759,    /* Grün */
+      #007AFF,    /* Blau */
+       #5856D6,    /* Lila */
+       #AF52DE     /* Pink */
+    );
+    width: auto;
+    min-width: 150px;
+    height: auto;
+    padding: 15px 30px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px) saturate(70%);
+     -webkit-backdrop-filter: blur(5px) saturate(70%);
+}
+
+/* 3. Navigation Links - initial versteckt */
+#navigationLinks {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease 0.4s;
+    display: flex;
+    gap: 20px;
+}
+
+/* 4. Links sichtbar machen */
+#fastNavigationHeader.visible #navigationLinks {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 5. Link Styling */
+#fastNavigationHeader a {
+    text-decoration: none;
+    font-style: italic;
+    font-size: 18px;
+    padding: 8px 10px;
+    position: relative;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* 6. Hover Effekt */
+#fastNavigationHeader a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+     
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateX(-50%);
+}
+
+#fastNavigationHeader a:hover::after {
+    width: 100%;
+}
+
+#fastNavigationHeader a:hover {
+    color: #4a6cf7;
+}
+
+/* 7. Kugel-Flug Animation (optional) */
+@keyframes ballFly {
+    0% {
+        top: -100px;
+        transform: translateX(-50%) scale(0.1);
+    }
+    60% {
+        transform: translateX(-50%) scale(1.1);
+    }
+    100% {
+        top: 50px;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+#fastNavigationHeader.animate {
+    animation: ballFly 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
