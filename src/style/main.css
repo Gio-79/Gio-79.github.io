@@ -1,0 +1,164 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+h1 { font-size: 2em;      } /* = 32px bei 16px Basis */
+h2 { font-size: 1.5em;    } /* = 24px */
+h3 { font-size: 1.17em;   } /* = 18.72px */
+h4 { font-size: 1em;      } /* = 16px */
+h5 { font-size: 0.83em;   } /* = 13.28px */
+h6 { font-size: 0.67em;   } /* = 10.72px */
+
+.styledButton{
+    color: black;
+    font-size: 16px;
+    height: 50px;
+    max-width: 600px;
+    border-radius: 15px;
+    padding: 1px 20px 1px 20px;
+    margin:10px;
+
+    border: 2px solid rgb(0, 0, 0);
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px) saturate(10%);
+     -webkit-backdrop-filter: blur(4px) saturate(10%);
+
+    box-shadow: 
+        0 0 30px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+
+.styledFont{
+    background-image: var(--gradient);
+    background: linear-gradient(180deg, 
+    
+      #34C759,    /* Grün */
+      #007AFF,    /* Blau */
+       #5856D6,    /* Lila */
+       #AF52DE     /* Pink */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+#backgroundSketchAvatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /* Breite auf Content beschränken */
+    width: 50%; /* 100% von #content, nicht vom Viewport */
+    height: 100vh; /* Oder 100% von #content */
+    
+    object-fit: cover;
+    object-position: right center;
+    z-index: -1;
+    
+    /* Skalierung limitieren */
+    min-width: 50%;
+    max-width: 100%; /* Nicht mehr als Content-Breite */
+    
+    /* Mask */
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 5%,
+        black 20%,
+        black 80%,
+        transparent 95%
+    );
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 5%,
+        black 20%,
+        black 80%,
+        transparent 95%
+    );
+    
+    
+    /* Stelle sicher, dass es andere Elemente nicht beeinflusst */
+    pointer-events: none;
+}
+
+
+
+
+.textBox{
+    max-width: 600px;
+    border-radius: 15px;
+    padding: 1px 20px 1px 20px;
+    margin:10px;
+
+    border: 2px solid rgb(0, 0, 0);
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px) saturate(10%);
+     -webkit-backdrop-filter: blur(4px) saturate(10%);
+
+    box-shadow: 
+        0 0 30px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* RICHTIGE REIHENFOLGE: */
+.box-right-allignment {
+    position: relative;
+    left: calc(50% + 10px);
+    transform: translateX(0);
+}
+
+/* Media Query NACH der Standard-Definition */
+/* Erhöhe Spezifität */
+@media (max-width: 1240px) {
+    div.box-right-allignment {
+        left: 50% !important;
+        transform: translateX(calc(-50% - 10px)) !important;
+    }
+}
+
+/* RICHTIGE REIHENFOLGE: */
+.box-left-allignment {
+    position: relative;
+    left: calc(10px);
+    transform: translateX(0);
+}
+
+/* Media Query NACH der Standard-Definition */
+/* Erhöhe Spezifität */
+@media (max-width: 1240px) {
+    div.box-left-allignment {
+        left: 10px !important;
+        transform: translateX(-10px) !important;
+    }
+}
+
+#content {
+    position: relative; /* WICHTIG: Container muss relative Position haben */
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh; /* Mindesthöhe für Content */
+    overflow: hidden; /* Verhindert, dass das Bild aus Content herausragt */
+}
+
+
+footer{
+    
+}
+
+@media (max-width: 1000px) {
+
+
+p {
+    font-size: 1rem;                         /* 16px */
+    line-height: 1;                        /* Höher für bessere Lesbarkeit */
+    margin: 0 0 1rem 0;
+}
+
+
+}

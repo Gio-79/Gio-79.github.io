@@ -1,0 +1,10 @@
+
+#topicSelection{
+    display: flex;
+    flex-direction: column;
+}
+
+#yearInput{
+    width: 300px;
+    height: 30px;
+}
