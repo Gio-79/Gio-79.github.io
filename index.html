@@ -1,65 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gio-79 - Indie 3D Artist & Game Developer</title>
-    <link rel="stylesheet" href="./src/style/DynamicNavigationHeader.css">
-    <link rel="stylesheet" href="./src/style/motionMaker.css">
-    <link rel="stylesheet" href="./src/style/DynamicHeader.css">
+    <title>Developer Giorgio Fornario</title>
+
     <link rel="stylesheet" href="./src/style/main.css">
-    <script src="./src/script/main.js"></script>
-    <script src="./src/script/motionObserver.js"></script>
+    <link rel="stylesheet" href="./src/style/startpage.css">
 </head>
+
 <body>
     <header>
-        <div id="Headline" class="appearMotion stagger-children">
-            <img src="./src/img/profile/IMG_3961 2.jpg" alt="" id="profileImage">
-            <div>
-                <h1 class="styledFont" id="usernameHeadline">Gio-79</h1>
-                <h2 id="descriptionHeadline">Indie 3D Artist & Game Developer</h3>
-            </div>
+        <div id="profile-picture-container">
+            <img src="./src/img/profile-picture.PNG" alt="" id="profile-picture-image">
         </div>
-
-        <div id="headerNavigationLinks">
-                <a  href="">Home</a>
-                <a  href="">2D</a>
-                <a  href="">3D</a>
-                <a  href="">Games</a>
+        <div id="navigation-panel">
+            <a href="./index.html">Home</a>
+            <a href="">Blog</a>
+            <a href="./index.html#career-section-container">Career</a>
+            <a href="./index.html#contact-me">Contact</a>
         </div>
     </header>
+    <div id="side-navigation">
 
-    <div id="fastNavigationHeader">
-        <!-- <img src="./src/img/profile/profilePicture_HighRes.jpg" alt="" id="profileImage"> -->
-         <div id="navigationLinks">
-                <a class="styledFont" href="">Home</a>
-                <a class="styledFont" href="">2D</a>
-                <a class="styledFont" href="">3D</a>
-                <a class="styledFont" href="">Game Dev</a>
-        </div>
     </div>
-
-    <div id="content">
-        <img src="./src/img/IMG_0125.PNG" alt="" id="backgroundSketchAvatar">
-
-    <div class="textBox box-right-allignment appearMotion slide-in-right">
-        <p>
-            <h3 class="styledFont">About Me</h3>
-            Hello! <br> <br>
-            I’m a student and office employee who spends a lot of free time experimenting with software and digital creativity. My main focus is 2D and 3D art, and alongside that I’m currently developing my dream game.
-            I created this website to collect my best work in one place – as a kind of online gallery and personal portfolio. It’s a space where I showcase projects I’m proud of and share insights into my creative and technical process.
-            On this website you’ll find: <br> <br>
-                - selected 2D and 3D artworks <br>
-                - tools, techniques, and challenges I’ve encountered, along with how I solved them <br>
-                - progress updates and thoughts on my current game development project <br> <br>
-            Enjoy exploring! 🚀
+    <img src="./src/img/header-image.PNG" alt="" id="header-image">
+    <div id="headline-text-container">
+        <h1>Giorgio Fornario</h2>
+        <h3>Game & Full Stack Developer</h3>
+    </div>
+   
+    <div id="about-me-container">
+        <img src="./src/img/profile-picture.PNG" alt="" id="profile-picture-about-me">
+        <p>Hi, I'm Gio, a Germany-based programmer and indie game developer. 
+           I primarly work with Unity and Godot using .Net/C#, and I'm always
+           looking for new ways to improve my skills and expand my knowledge.
+           <br>
+           <br>
+           In my spare time, I enjoy building projects with microcontrollers such as Arduino,
+           developing PC applications, creating games, and exploring new technologies.
+           I love turning ideas into working prototypes and continuously challenging
+           myself with new projects.
+           <br><br>
+           This portfolio is where I share my work, experiments, and ongoing projects. Feel
+           free to explore, and I hobe you enjoy browsing trough my creations!
         </p>
     </div>
+     <div id="skills-section-container">
+        <h2>LANGUAGES</h2>
+        <div id="skills-programming-languages">
+            <!--C#-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/c-sharp.png" alt="">
+                    <h4>c#</h3>
+                </div>
+                <p id="skilllevel">Expert</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 90%;"></div>
+                </div>
+                <p id="skill-level-precentage">90%</p>
+             
+            </div>
+            
 
+             <!--C++-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/c-.png" alt="">
+                    <h4>c++</h3>
+                </div>
+                <p id="skilllevel">Elementary</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 30%;"></div>
+                </div>
+                <p id="skill-level-precentage">30%</p>
+             
+            </div>
+
+             <!--Java-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/java.png" alt="">
+                    <h4>Java</h3>
+                </div>
+                <p id="skilllevel">Advanced</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 70%;"></div>
+                </div>
+                <p id="skill-level-precentage">70%</p>
+             
+            </div>
+
+             <!--JavaScript-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/js.png" alt="">
+                    <h4>JavaScript</h3>
+                </div>
+                <p id="skilllevel">Advanced</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 85%;"></div>
+                </div>
+                <p id="skill-level-precentage">85%</p> 
+            </div>
+
+              <!--HTML-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/html.png" alt="">
+                    <h4>HTML</h3>
+                </div>
+                <p id="skilllevel">Expert</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 100%;"></div>
+                </div>
+                <p id="skill-level-precentage">100%</p> 
+            </div>
+
+             <!--Python-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/python.png" alt="">
+                    <h4>Python</h3>
+                </div>
+                <p id="skilllevel">Beginner</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 15%;"></div>
+                </div>
+                <p id="skill-level-precentage">15%</p> 
+            </div>
+        </div>
+        <h2>TOOLS & UTILITIES</h2>
+        <div id="skills-tools">
+            <!--Unity-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/unity-game-engine-icon.webp" alt="">
+                    <h4>Unity</h3>
+                </div>
+                <p id="skilllevel">Advanced</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 60%;"></div>
+                </div>
+                <p id="skill-level-precentage">60%</p> 
+            </div>
+
+             <!--Godot-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/godot.png" alt="">
+                    <h4>Godot</h3>
+                </div>
+                <p id="skilllevel">Advanced</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 80%;"></div>
+                </div>
+                <p id="skill-level-precentage">80%</p> 
+            </div>
+
+             <!--VS-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/visual-basic.png" alt="">
+                    <h4>VS</h3>
+                </div>
+                <p id="skilllevel">Expert</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 90%;"></div>
+                </div>
+                <p id="skill-level-precentage">90%</p> 
+            </div>
+
+             <!--VS Code-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/visual-studio-code-2019.png" alt="">
+                    <h4>VS Code</h3>
+                </div>
+                <p id="skilllevel">Expert</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 95%;"></div>
+                </div>
+                <p id="skill-level-precentage">95%</p> 
+            </div>
+
+             <!--Electron-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/Electron_Software_Framework_Logo.png" alt="">
+                    <h4>Electron</h3>
+                </div>
+                <p id="skilllevel">Elementary</p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 15%;"></div>
+                </div>
+                <p id="skill-level-precentage">15%</p> 
+            </div>
+
+             <!--Blender-->
+            <div class="skill-box-container">
+                <div id="headline-skill-box">
+                    <img src="./src/icons/blender.webp" alt="">
+                    <h4>Blender</h3>
+                </div>
+                <p id="skilllevel">Advanced</Address></p>
+                <div id="skill-progressbar">
+                    <div id="skill-progressbar-filler" style="width: 75%;"></div>
+                </div>
+                <p id="skill-level-precentage">75%</p> 
+            </div>
+        </div>
+    </div>   
+
+    <div id="career-section-container">
+
+    </div>
 
     <footer>
-        <p>Footer</p>
+        <div id="contact-me">
+            <a href="mailto:giorgiofornario71@gmail.com" target="_blank"><img src="./src/icons/Mail-Icon.png" alt="">SEND ME AN EMAIL</a>
+            <a href="https://www.linkedin.com/in/giorgio-fornario-352114398?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><img src="./src/icons/linkedin-app-white-icon.webp" alt="">CONNECT ON LINKED IN</a>
+        </div>
+        <h3>You Can Also Find Me Here...</h3>
+        <div id="social-links">
+            <a href="https://www.linkedin.com/in/giorgio-fornario-352114398?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><img src="./src/icons/linkedin-app-white-icon.webp" alt=""></a>
+            <a href="https://github.com/Gio-79" target="_blank"><img src="./src/icons/178-1787366_coming-soon-github-white-icon-png.png" alt=""></a>
+        </div>
+        <p>© 2026 Giorgio Fornario. All rights reserved.</p>
     </footer>
-    
 </body>
+
 </html>
